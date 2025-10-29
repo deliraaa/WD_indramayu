@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/src/swiper/swiper-bundle.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-poppins overflow-x-hidden">
+  <!-- hero section -->
+   <section class="relative">
+      <!-- navbar start -->
+ <nav class="py-3 absolute w-full z-50">
+  <div class=" mx-auto px-4 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      <!-- Desktop menu: hanya muncul lg ke atas -->
+      <div class="hidden lg:flex items-center backdrop-blur-3xl bg-[rgba(255,255,255,0.2)] rounded-full px-4 py-2 flex space-x-2">
+        <ul class="flex space-x-6">
+          <li><a href="#hero" class="nav">Beranda</a></li>
+          <li><a href="#event" class="nav">Event</a></li>
+          <li><a href="#about" class="nav">Tentang</a></li>
+          <li><a href="#testimonial" class="nav">Review</a></li>
+        </ul>
+      </div> 
+
+      <!-- Logo -->
+      <img class="w-32" src="img/logo-1.svg" alt="Logo"> 
+
+      <!-- Mobile button: muncul sm ke atas hingga lg-1 -->
+      <div class="lg:hidden flex items-center">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none focus:text-gray-900">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden lg:hidden px-10">
+    <div class="px-4 pt-4 pb-2 space-y-2 bg-secondary w-full rounded-lg">
+      <ul class="space-y-2 flex-col justify-center items-center text-center ">
+        <li><a href="#hero" class="nav">Beranda</a></li>
+        <li><a href="#event" class="nav">Event</a></li>
+        <li><a href="#about" class="nav">Tentang</a></li>
+        <li><a href="#testimonial" class="nav">Review</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- navbar end -->
+    <div  data-aos="fade-right" data-aos-duration="1000" class=" absolute inset-x-0 bottom-0">
+      <div class=" container mx-auto mb-10">
+        <h1 class="headline">Temukan Tantangan Olahragamu Berikutnya</h1>
+        <p class="text-sm text-[#FBFBFB] max-w-md mt-3"> Ikuti event lari, turnamen, dan kompetisi seru untuk semua kalangan – dari pemula hingga profesional.</p>
+        <div class="flex gap-2 mt-5">
+          <button class="bg-secondary text-primary w-40 py-2 text-sm rounded-full hover:brightness-125 duration-300 box-border">Lihat Event</button>
+          <button class="border-[1.5px] border-secondary text-secondary w-40 py-2 text-sm rounded-full hover:bg-secondary hover:text-primary duration-300 box-border">Daftar Sekarang</button>
+        </div>
+      </div>
+    </div>
+      <img class="w-full h-screen object-cover" src="./img/hero.avif" alt="">
+   </section>
+  <!-- hero section -->
+  <!-- About section -->
+   <section id="about">
+    <div class="container mx-auto pt-[120px]">
+      <div class="grid lg:grid-cols-12 grid-cols-1 gap-5">
+        <div data-aos="fade-right" data-aos-duration="800" class="col-span-5">
+          <div class="section">About Us</div>
+          <h1 class="title mt-5">Temukan Tantangan Olahragamu Berikutnya</h1>
+          <p class="paragraf mt-3 line-clamp-2">Ikuti event lari, turnamen, dan kompetisi seru untuk semua kalangan – dari pemula hingga profesional.</p>
+          <button class="btn-primary mt-5">Lihat Event</button>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="800" class="col-span-7">
+         <div class="lg:flex gap-5">
+           <div class="relative">
+            <div class="absolute px-5">
+              <div class="border-2 border-secondary rounded-full px-5 py-2 w-max mt-5 text-secondary">
+                <p class="text-xs">Outdoor Sports</p>
+              </div>
+              <div class="flex justify-between lg:mt-36 mt-32">
+                <h1 class="lg:text-3xl text-2xl max-w-md text-secondary font-bebas">Olahraga Luar Ruangan: Sehat & Menyatu dengan Alam</h1>
+                <div class="bg-secondary rounded-full p-3 h-max mt-5"><img src="./img/panah.svg" alt=""></div>
+              </div>
+            </div>
+            <img src="./img/about.avif" alt="">
+          </div>
+          <div class="lg:mt-0 mt-5">
+            <div class="absolute px-5 ">
+              <div class="border-2 border-secondary rounded-full px-5 py-2 w-max mt-5 text-secondary">
+                <p class="text-xs">Racket Sports</p>
+              </div>
+            </div>
+            <img src="./img/about-2.avif" alt="">
+            <h1 class="text-3xl text-primary font-bebas mt-3">Ketepatan, Kecepatan, dan Strategi</h1>
+            <p class="paragraf">Racket sports melatih konsentrasi, strategi, dan koordinasi tubuh </p>
+          </div>
+         </div>
+       </div>
+      </div>
+    </div>
+   </section>
+  <!-- About section -->
+  <!-- Event section -->
+    <section id="event" class="container mx-auto pt-[120px]">
+      <div class="lg:flex justify-between">
+        <div data-aos="fade-right" data-aos-duration="800" >
+          <div class="section">Event</div>
+          <h1 class="title mt-5 max-w-lg">Event Pilihan untuk Menambah Pengalamanmu</h1>
+        </div>
+        <p data-aos="fade-left" data-aos-duration="800"  class="paragraf max-w-xl lg:mt-20 mt-5 line-clamp-2">Temukan berbagai event menarik, dari olahraga hingga hiburan, yang bisa diikuti untuk menambah pengalaman dan keseruanmu.</p>
+      </div>
+      <div class="mt-10">
+          <div class="swiper testiSwiper mt-10">
+            <div class="swiper-wrapper mb-10">
+              <div data-aos="fade-right" data-aos-duration="300"  class="swiper-slide">
+                  <a href="detail-event.html"><img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-1.svg" alt="">   </a>        
+              </div>
+              <div data-aos="fade-right" data-aos-duration="500"  class="swiper-slide">
+                  <img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-2.svg" alt="">           
+              </div>
+                <div data-aos="fade-right" data-aos-duration="700"  class="swiper-slide">
+                  <img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-3.svg" alt="">           
+              </div>
+              <div data-aos="fade-right" data-aos-duration="1000"  class="swiper-slide">
+                  <img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-4.svg" alt="">           
+              </div>
+                <div class="swiper-slide">
+                  <img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-5.svg" alt="">           
+              </div>
+                <div class="swiper-slide">
+                  <img class="w-full" src="./img/event-3.svg" alt="">           
+              </div>
+            </div>
+             <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+  <!-- Event section -->
+  <!-- Jadwal Section -->
+   <section id="jadwal">
+    <div class="container mx-auto pt-[120px]">
+      <div class="grid lg:grid-cols-12 grid-cols-1 gap-10">
+        <div  data-aos="fade-right" data-aos-duration="800"  class="col-span-6">
+          <img class="w-full" src="./img/jadwal.svg" alt="">
+       </div>
+        <div data-aos="fade-left" data-aos-duration="800"  class="col-span-6">
+          <div class="section">Schedule</div>
+          <h1 class="title mt-5">Yuk, Intip Jadwal Acaranya dan Tentukan Kapan Kamu Mau Ikutan!</h1>
+          <p class="paragraf mt-3 line-clamp-2">Beragam acara seru sudah menanti kamu! Mulai dari pembukaan hingga penutupan, semuanya dirancang untuk memberikan pengalaman terbaik.</p>
+          <div class="swiper mySwiper w-full mt-10">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class=" card w-full">
+                  <h1 class="text-2xl text-primary font-bebas">Event Terdekat Minggu Ini</h1>
+                  <div class="px-3 space-y-1 mt-2">
+                    <p class="text-sm text-primary">🗓️  15 Oktober 2025</p>
+                    <p class="text-sm text-primary">🏃‍♂  Fun Run Bali 2025</p>
+                    <p class="text-sm text-primary">📍  Lapangan Renon, Denpasar</p>
+                  </div>
+                  <a href=""> <button class="bg-primary text-white w-32 py-2 text-xs mt-5 rounded-full font-medium hover:brightness-100 duration-300 box-border">Daftar Sekarang</button></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class=" card w-full">
+                  <h1 class="text-2xl text-primary font-bebas"> Event Populer</h1>
+                  <div class="px-3 space-y-1 mt-2">
+                    <p class="text-sm text-primary">🗓️  20 Oktober 2025</p>
+                    <p class="text-sm text-primary">🧘  Yoga Marathon 2025</p>
+                    <p class="text-sm text-primary">📍 Pantai Sanur, Bali</p>
+                  </div>
+                  <a href=""> <button class="bg-primary text-white w-32 py-2 text-xs mt-5 rounded-full font-medium hover:brightness-100 duration-300 box-border">Daftar Sekarang</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+    <!-- Jadwal Section -->
+    <!-- Momen Section -->
+    <section>
+      <div class="container mx-auto pt-[120px]">
+        <div class="grid lg:grid-cols-12 gap-5">
+          <div data-aos="fade-right" data-aos-duration="800"  class="lg:col-span-5 col-span-6">
+            <div class="section">Momen</div>
+            <h1 class="title mt-5 max-w-md">Tangkap Setiap Momen Tak Terlupakan</h1>
+            <p class="paragraf mt-3 max-w-sm">Dari awal sampai akhir, semua momen seru siap untuk kamu nikmati di sini.</p>
+            <button class="btn-primary mt-5">Lihat Event</button>
+          </div>
+          <div data-aos="fade-left" data-aos-duration="800"  class="col-span-7">
+            <div class="flex gap-5">
+              <img class="w-[400px]" src="./img/momen-1.avif" alt="">
+              <div class="space-y-5 lg:block hidden">
+                <img class="w-80" src="./img/momen-2.avif" alt="">
+                <img class="w-80" src="./img/momen-3.avif" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Momen Section -->
+   <!-- faq Section -->
+   <section id="faq">
+      <div class="container mx-auto pt-[120px]">
+      <div class="lg:flex justify-between">
+        <div data-aos="fade-right" data-aos-duration="800" >
+          <div class="section">Faq</div>
+          <h1 class="title mt-5 max-w-lg">Butuh Bantuan? Temukan Jawabannya di Sini</h1>
+        </div>
+        <p data-aos="fade-left" data-aos-duration="800"  class="paragraf max-w-xl lg:mt-20 mt-5 line-clamp-2">Punya pertanyaan soal cara ikut event, daftar lomba, atau buat event? Semua jawabannya ada biar kamu gak bingung lagi!</p>
+      </div>
+      <div class="grid lg:grid-cols-12 grid-cols-1 gap-10 lg:mt-10 mt-5">
+        <div data-aos="fade-right" data-aos-duration="800"  class="col-span-6">
+          <div class="items-center lg:mt-0 mt-5">
+          <div class="relative mb-3 card-faq">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
+                  data-collapse-target="animated-collapse-1"
+                >
+                  <span class="title-accordion">Apakah info event selalu diperbarui?</span>
+                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-1"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="paragraf-accordion">
+                 Ya! Tim kami rutin memperbarui data event agar kamu selalu mendapatkan informasi terbaru dan akurat, mulai dari jadwal, lokasi, hingga kontak penyelenggara.
+                </div>
+              </div>
+          </div>
+          <div class="relative mb-3 card-faq">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
+                  data-collapse-target="animated-collapse-2"
+                >
+                  <span class="title-accordion">Apakah platform ini gratis?</span>
+                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-2"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="paragraf-accordion">
+                 Ya, semua informasi bisa kamu akses secara gratis. Kami ingin mendukung semangat olahraga dengan menyediakan wadah informasi yang terbuka untuk semua.
+                </div>
+              </div>
+          </div>
+          <div class="relative mb-3 card-faq">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
+                  data-collapse-target="animated-collapse-3"
+                >
+                  <span class="title-accordion">Apakah ada notifikasi untuk event baru?</span>
+                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-3"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="paragraf-accordion">
+                 Ya, kalau kamu sudah login dan mengaktifkan notifikasi, kami akan mengirim pemberitahuan setiap kali ada event olahraga baru sesuai minatmu.
+                </div>
+              </div>
+          </div>
+          <div class="relative mb-3 card-faq">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
+                  data-collapse-target="animated-collapse-4"
+                >
+                  <span class="title-accordion">Bagaimana cara ikut event?</span>
+                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-4"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="paragraf-accordion">
+             Kamu bisa langsung pilih event yang kamu minati di halaman utama atau bagian “Jadwal Event”. Setelah itu, klik tombol “Daftar Sekarang” pada detail event tersebut.
+                </div>
+              </div>
+          </div>
+          <div class="relative mb-3 card-faq">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
+                  data-collapse-target="animated-collapse-5"
+                >
+                  <span class="title-accordion">Apakah saya bisa membagikan event ke teman?</span>
+                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-5"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="paragraf-accordion">
+            Bisa! Setiap event memiliki tombol Bagikan, sehingga kamu bisa langsung membagikannya ke WhatsApp, Instagram, atau media sosial lainnya.
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="800"  class="col-span-6 lg:block hidden">
+          <img class="w-full" src="./img/faq.avif" alt="">
+        </div>
+      </div>
+    </div>
+   </section>
+  <!-- faq Section -->
+  <!-- testimoni Section -->
+   <section id="testimoni">
+    <div class="container mx-auto pt-[120px]">
+      <div class="section">Testimoni</div>
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
+        <div data-aos="fade-right" data-aos-duration="800"  class="card">
+          <div class="flex gap-2">
+            <img src="./img/testi-1.svg" alt="">
+            <div class="mt-4">
+              <h1 class="name">Melati Ayu</h1>
+              <p class="profile">Mahasiswi & Atlet Voli Kampus </p>
+            </div>
+          </div>
+          <p class="mt-3 komen">Sekarang saya bisa ikut berbagai turnamen voli tanpa perlu repot mencari informasi sendiri. Semua tersaji di satu tempat!</p>
+          <div class="flex justify-end">
+            <img src="./img/love.svg" alt="">
+          </div>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="800"  class="card">
+          <div class="flex gap-2">
+            <img src="./img/testi-2.svg" alt="">
+            <div class="mt-4">
+              <h1 class="name">Andi Pratama</h1>
+              <p class="profile">Peserta Lomba Lari 10K</p>
+            </div>
+          </div>
+          <p class="mt-3 komen">Platform ini memudahkan saya menemukan lomba lari di kota saya. Semua info lengkap dan gampang diakses!</p>
+          <div class="flex justify-end">
+            <img src="./img/love.svg" alt="">
+          </div>
+        </div>
+        <div data-aos="fade-right" data-aos-duration="800"  class="card">
+          <div class="flex gap-2">
+            <img src="./img/testi-3.svg" alt="">
+            <div class="mt-4">
+              <h1 class="name">Sinta Maharani</h1>
+              <p class="profile"> Pelatih Fitness & Atlet Komunitas</p>
+            </div>
+          </div>
+          <p class="mt-3 komen">Saya bisa mengetahui berbagai event olahraga terbaru dan mendaftar tanpa ribet. Sangat membantu komunitas kami!"</p>
+          <div class="flex justify-end">
+            <img src="./img/love.svg" alt="">
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="800"  class="card">
+          <div class="flex gap-2">
+            <img src="./img/testi-4.svg" alt="">
+            <div class="mt-4">
+              <h1 class="name">Rudi Hartono</h1>
+              <p class="profile">Komunitas Sepeda “Bali Cycling Club” </p>
+            </div>
+          </div>
+          <p class="mt-3 komen">Platform ini jadi andalan kami untuk menemukan event sepeda lokal maupun nasional. Sangat memudahkan anggota klub!</p>
+          <div class="flex justify-end">
+            <img src="./img/love.svg" alt="">
+          </div>
+        </div>
+        <div data-aos="fade-left" data-aos-duration="800"  class="card">
+          <div class="flex gap-2">
+            <img src="./img/testi-5.svg" alt="">
+            <div class="mt-4">
+              <h1 class="name">Rina Kusuma</h1>
+              <p class="profile">Instruktur Yoga & Kebugaran</p>
+            </div>
+          </div>
+          <p class="mt-3 komen">Platform ini memudahkan saya menemukan event olahraga yang sesuai minat peserta kelas saya. Sangat bermanfaat!</p>
+          <div class="flex justify-end">
+            <img src="./img/love.svg" alt="">
+          </div>
+        </div>
+        <div  data-aos="fade-left" data-aos-duration="800"  class="card lg:block hidden">
+          <div class="flex gap-2">
+            <img src="./img/testi-6.svg" alt="">
+            <div class="mt-4">
+              <h1 class="name">Putri Laras</h1>
+              <p class="profile">Mahasiswi Atletik Kampus</p>
+            </div>
+          </div>
+          <p class="mt-3 komen">Sekarang saya bisa ikut berbagai lomba atletik tanpa harus mencari-cari info sendiri. Semua tersedia lengkap di satu platform.</p>
+          <div class="flex justify-end">
+            <img src="./img/love.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+  <!-- testimoni Section -->
+<!-- CTA Section -->
+<section id="cta" class="relative w-full py-20 overflow-hidden container mx-auto lg:mt-[120px] mt-10">
+  <!-- Background Image -->
+  <img src="./img/cta (1).webp" alt="Marathon CTA"
+    class="absolute inset-0 w-full h-full object-cover brightness-75">
+
+  <!-- Overlay content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 flex flex-col items-center justify-center text-center">
+    <h1
+      class="text-secondary font-bebas leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-[65px]">
+      Gabung Sekarang, Wujudkan Kemenanganmu!
+    </h1>
+
+    <p
+      class="text-secondary mt-3 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[500px]">
+      Dari awal sampai akhir, semua momen seru siap untuk kamu nikmati di sini.
+    </p>
+
+    <div class="flex flex-col sm:flex-row justify-center gap-3 mt-6 w-full sm:w-auto">
+      <button
+        class="bg-secondary text-primary px-6 py-2 text-sm sm:text-base rounded-full hover:brightness-125 duration-300">
+        Ayo Gabung!
+      </button>
+      <button
+        class="border border-secondary text-secondary px-6 py-2 text-sm sm:text-base rounded-full hover:bg-secondary hover:text-primary duration-300">
+        Lihat Jadwal
+      </button>
+    </div>
+  </div>
+</section>
+
+
+  <!-- footer -->
+   <footer class="bg-[#181818]">
+    <div class="container mx-auto py-[50px] mt-32">
+      <div class="grid lg:grid-cols-12 md:grid-cols-8  lg:gap-0 gap-10">
+        <div class="col-span-5">
+          <img src="./img/logo.svg" alt="">
+          <p class="text-sm text-[#FBFBFB] mt-3 max-w-96">Connecting you with trusted service and support. Stay updated with our latest news and offers. Reach out anytime — we're here to help.</p>
+        </div>
+        <div class="col-span-2">
+          <h1 class="subtitle-footer">Social Media</h1>
+          <div class="space-y-[8px] mt-3">
+              <p class="paragraf-footer">Instagram</p>
+              <p class="paragraf-footer">Whatsapp</p>
+              <p class="paragraf-footer">Facebook</p>
+              <p class="paragraf-footer">Twiter</p>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <h1 class="subtitle-footer">Link</h1>
+          <div class="space-y-[8px] mt-3">
+              <p class="paragraf-footer">Home</p>
+              <p class="paragraf-footer">About</p>
+              <p class="paragraf-footer">Event</p>
+              <p class="paragraf-footer">Schedule</p>
+          </div>
+        </div>
+        <div class="col-span-3">
+          <h1 class="subtitle-footer">Contact Us</h1>
+          <div class="space-y-[8px] mt-3">
+             <div class="flex gap-3">
+                <i class="fa-regular fa-envelope text-lg text-[rgba(252,252,252,0.65)]"></i>
+               <p class="paragraf-footer">sportzone@gmail.com</p>
+             </div>
+             <div class="flex gap-3">
+                <i class="ri-phone-line text-lg text-[rgba(252,252,252,0.65)]"></i>
+                <p class="paragraf-footer">+62 894  774 523</p>
+             </div>
+             <div class="flex gap-3">
+                <i class="ri-customer-service-2-line text-lg text-[rgba(252,252,252,0.65)]"></i>
+                <p class="paragraf-footer">Need help?</p>
+             </div>
+          </div>
+        </div>
+      </div>
+      <hr class="border border-[rgba(252,252,252,0.1)] mt-[50px]">
+      <div class="md:flex justify-center mt-5">
+        <p class="text-[15px] text-white">© Copyright by Erpien. All right reserved</p>
+      </div>
+    </div>
+   </footer>
+  
+<script src="/src/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,     // animasi hanya jalan sekali
+  });
+</script>
+</body>
+</html> 
+
