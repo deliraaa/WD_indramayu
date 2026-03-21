@@ -1,126 +1,169 @@
-var swiper2 = new Swiper(".testiSwiper", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    bulletActiveClass: "custom-bullet-active",
-    bulletClass: "custom-bullet",
-  },
-   breakpoints:{
-    1:{
-      slidesPerView: 1.5,
-      spaceBetween: 20,
-      centeredSlides:false,
-    },
-
-    640:{
-      slidesPerView: 2.4,
-      spaceBetween: 30,
-      centeredSlides:false,
-    },
-    
-    1024:{
-      slidesPerView: 3,
-      spaceBetween: 30,
-      centeredSlides:false,
-    },
-    
-    1280:{
-      slidesPerView: 4,
-      spaceBetween: 20,
-      centeredSlides:false,
-    },
-    1900:{
-      slidesPerView: 4.8,
-      spaceBetween: 20,
-      centeredSlides:false,
-    },
-   }
-});
-
 const swiper = new Swiper(".mySwiper", {
-  loop: true, // autoplay + loop harus di luar
-  autoplay: {
-    delay: 2000, // 2 detik
-    disableOnInteraction: false,
+  slidesPerView: 1,
+  spaceBetween: 16,
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    draggable: true,
   },
-  spaceBetween: 20,
   breakpoints: {
-    320: {       // smartphone
+    640: {
       slidesPerView: 1.2,
-      centeredSlides: true,
     },
-    768: {       // tablet
+    768: {
       slidesPerView: 2,
-      centeredSlides: false,
     },
-    1024: {      // desktop
-      slidesPerView: 2,
-      centeredSlides: false,
+    1024: {
+      slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 4,
     },
   },
 });
-
-
-//button faq
-document.querySelectorAll('.buttonImg').forEach(function (buttonImg) {
-  buttonImg.addEventListener('click', function () {
-    var question = this.closest('.cursor-pointers');
-    var answer = question.nextElementSibling;
-    var toggleButton = this.querySelector('.toggleButton');
-    var groupContainer = question.closest('.group');
-
-
-    if (answer.classList.contains('hidden')) {
-      answer.classList.remove('hidden');
-      toggleButton.classList.add('rotate-90', 'color-button-faq');
-     
-    } else {
-      answer.classList.add('hidden');
-      toggleButton.classList.remove('rotate-90', 'color-button-faq');
-    
-    }
-  });
-});
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
   const buttons = document.querySelectorAll('button[data-collapse-target]');
+
   buttons.forEach(button => {
-      button.addEventListener('click', function() {
-          const targetId = button.getAttribute('data-collapse-target');
-          const target = document.querySelector(`[data-collapse="${targetId}"]`);
-          const icon = button.querySelector('i');
-          if (target.style.height === '0px' || target.style.height === '') {
-              target.style.height = target.scrollHeight + 'px';
-          } else {
-              target.style.height = '0px';
-          }
-           icon.classList.toggle('rotate-180');
+    button.addEventListener('click', function() {
+      const targetId = button.getAttribute('data-collapse-target');
+      const target = document.querySelector(`[data-collapse="${targetId}"]`);
+      const icon = button.querySelector('i');
+
+     
+      document.querySelectorAll('[data-collapse]').forEach(other => {
+        if (other !== target) {
+          other.style.height = '0px';
+          const otherBtn = document.querySelector(
+            `button[data-collapse-target="${other.getAttribute('data-collapse')}"] i`
+          );
+          if (otherBtn) otherBtn.classList.remove('rotate-180');
+        }
       });
+
+  
+      if (target.style.height === '0px' || target.style.height === '') {
+        target.style.height = target.scrollHeight + 'px';
+      } else {
+        target.style.height = '0px';
+      }
+      icon.classList.toggle('rotate-180');
+    });
+  });
+
+
+  const defaultTarget = document.querySelector('[data-collapse="animated-collapse-1"]');
+  const defaultButton = document.querySelector('button[data-collapse-target="animated-collapse-1"]');
+  if (defaultTarget && defaultButton) {
+    defaultTarget.style.height = defaultTarget.scrollHeight + 'px';
+    const icon = defaultButton.querySelector('i');
+    if (icon) icon.classList.add('rotate-180');
+  }
+});
+
+
+
+
+
+
+
+// Navbar Fixed
+window.onscroll = function () {
+  const header = document.querySelector('header');
+  const fixedNav = header.offsetTop;
+
+  if (window.pageYOffset > fixedNav) {
+    header.classList.add('');
+  } else {
+    header.classList.remove('');
+  }
+}
+
+//dropdown 
+document.querySelectorAll('.dropdown-button').forEach(button =>{
+  const dropdownMenu = button.nextElementSibling;
+  const dropdownIcon = button.querySelector('.dropdown-icon');
+
+  button.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("hidden");
+    dropdownIcon.classList.toggle("ri-arrow-up-s-line");
+    dropdownIcon.classList.toggle("ri-arrow-down-s-line");
   });
 });
 
+// Sidebar
+ document.addEventListener("DOMContentLoaded", () => {
 
+  const hamburger = document.getElementById('hamburger');
+  const hamburgers = document.getElementById('hamburgers');
+  const navMenu = document.getElementById('nav-menu');
+  const closeBtn = document.getElementById('close-menu');
+  const sidebarOverlay = document.getElementById('sidebar-overlay'); // tambahkan ini di HTML kamu
 
-// navbar 
-const menuToggle = document.getElementById('menu-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-
-menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
-});
-
-// scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+  if (hamburger) {
+    hamburger.addEventListener('click', () => {
+      navMenu?.classList.remove('-translate-y-full');
     });
+  }
+
+  if (hamburgers) {
+    hamburgers.addEventListener('click', () => {
+      navMenu?.classList.toggle('-translate-y-full');
+      navMenu?.classList.remove('-translate-y-0');
+
+      if (sidebarOverlay) {
+        sidebarOverlay.classList.toggle('hidden');
+        sidebarOverlay.classList.toggle('bg-black-50');
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      navMenu?.classList.add('-translate-y-full');
+    });
+  }
+
 });
+
+// end: Sidebar
+
+
+//trasaction detail
+ function previewImage(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const img = document.getElementById('preview-image');
+            const icon = document.getElementById('upload-icon');
+
+            img.src = e.target.result;
+            img.classList.remove('hidden');
+            icon.classList.add('hidden');
+        };
+        reader.readAsDataURL(file);
+    }
+
+
+// button hover 
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttonGroups = document.querySelectorAll('.btn-group');
+
+            buttonGroups.forEach(group => {
+                const primary = group.querySelector('.btn-primary');
+                const secondary = group.querySelector('.btn-secondary');
+
+                if (primary && secondary) {
+                    secondary.addEventListener('mouseenter', () => {
+                        primary.classList.add('secondary-style');
+                    });
+
+                    secondary.addEventListener('mouseleave', () => {
+                        primary.classList.remove('secondary-style');
+                    });
+                }
+            });
+        });

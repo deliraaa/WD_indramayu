@@ -1,512 +1,869 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="/src/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="font-poppins overflow-x-hidden">
-  <!-- hero section -->
-   <section class="relative">
-      <!-- navbar start -->
- <nav class="py-3 absolute w-full z-50">
-  <div class=" mx-auto px-4 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      
-      <!-- Desktop menu: hanya muncul lg ke atas -->
-      <div class="hidden lg:flex items-center backdrop-blur-3xl bg-[rgba(255,255,255,0.2)] rounded-full px-4 py-2 flex space-x-2">
-        <ul class="flex space-x-6">
-          <li><a href="#hero" class="nav">Beranda</a></li>
-          <li><a href="#event" class="nav">Event</a></li>
-          <li><a href="#about" class="nav">Tentang</a></li>
-          <li><a href="#testimonial" class="nav">Review</a></li>
-        </ul>
-      </div> 
+<body class="!overflow-x-hidden bg-background font-urbanist text-colorBlack">
+ <header id="navbar"class="top-0 z-50 w-full items-center duration-200">
+        <div class="container mx-auto my-2 2xl:my-3">
+            <div class=" my-4 sm:my-0 mx-auto flex items-center md:justify-between py-2">
+                <a href="index.html"
+                    class="w-32 gap-2 items-center">
+                    <img src="img/logo-1.svg" alt="" class="">
+                </a>
+                <div class="flex items-center ">
+                    <button id="hamburger" type="button" class="absolute right-16 block sm:hidden">
+                        <i class="ri-menu-line "></i>
+                    </button>
+                    <nav id="nav-menu"
+                        class="fixed nav transition-transform duration-200 -translate-y-full left-0 top-0 bottom-0 h-full z-50  w-full sm:translate-y-0 bg-white dark:bg-bodyDark sm:dark:bg-transparent sm:bg-transparent shadow-lg sm:duration-200 sm:static sm:h-auto sm:block sm:w-full sm:rounded-none md:text-xs sm:shadow-none xl:md:text-sm">
+                        <div class="flex sm:hidden justify-between items-center mt-8 container mx-auto">
+                            <a href="index.html"
+                                class="w-auto items-center">
+                                <img src="/dist/img/logo.svg" alt="" class="">
+                            </a>
+                            <div class="flex ">
+                              <div class="mr-6 flex gap-2 z-50">
+                                <button id="hamburgers" type="button" class="z-50 block sm:hidden">
+                                    <i class="ri-close-large-fill text-xl p-2"></i>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="container mt-5 sm:mt-0 block sm:flex md:font-semibold md:space-y-0 space-y-7 md:p-0 p-5 ">
+                            <li class="group">
+                                <a href="#home" class="nav-class">
+                                    <i
+                                        class="ri-home-2-line mr-3 text-2xl text-black sm:hidden"></i>
+                                    <span
+                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary  lg:text-sm 2xl:text-base">Beranda</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#relawan" class="nav-class">
+                                    <i
+                                        class="ri-team-fill mr-3 text-2xl text-black sm:hidden"></i>
+                                    <span
+                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary  lg:text-sm 2xl:text-base">Fitur</span>
+                                </a>
+                            </li>
+                            <li class="group">
+                                <a href="#about" class="nav-class">
+                                    <i
+                                        class="ri-earth-fill mr-3 text-2xl text-black sm:hidden"></i>
+                                    <span
+                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary  lg:text-sm 2xl:text-base">Testimoni</span>
+                                </a>
+                            </li>
+                             <li class="group">
+                                <a href="#about" class="nav-class">
+                                    <i
+                                        class="ri-earth-fill mr-3 text-2xl text-black sm:hidden"></i>
+                                    <span
+                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary  lg:text-sm 2xl:text-base">Paket</span>
+                                </a>
+                            </li>
+                            <div class="items-center gap-2 md:hidden block sm:flex">
+                              <button class="btn-primary">Masuk</button>
+                              <button class="btn-secondary">Daftar</button>
+                            </div>
+                             <p class="text-[15px] text-colorBlack mt-2 md:hidden block">ⓒ Copyright by EcoRasa. All right reserved</p>
+                        </ul>
+                    </nav>
+                </div>
+               <div class="items-center gap-2 hidden sm:flex">
+                  <button id="openLogin" class="btn-primary">Masuk</button>
+                  <button id="openRegister" class="btn-secondary">Daftar</button>
+               </div>
+               <!-- OVERLAY -->
+                <div id="authModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50">
+                  <div class="bg-white w-[90%] max-w-md rounded-2xl p-10 relative animate-fadeIn">
+                    <button id="closeModal" class="absolute top-3 right-3 text-gray-500 text-2xl">&times;</button>
+                    <!-- LOGIN FORM -->
+                    <div id="loginForm">
+                      <div class="flex flex-col justify-center">
+                        <div class="flex justify-center">
+                          <img class="w-32 my-10  " src="img/logo.svg" alt="">
+                        </div>
+                        <h1 class="subtitle text-center">Selamat Datang Kembali</h1>
+                        <p class="paragraf text-center max-w-md">Masuk dan Mulai Pilih Paket Tes CPNS Anda Sekarang, Jadilah Juara!</p>
+                      </div>
+                     
+                      <input type="email" placeholder="Email" class="input-auth">
+                      <input type="password" placeholder="Password" class="input-auth">
+                      <button class="btn-primary w-full mt-3">Masuk</button>
+                      <p class="text-sm text-center mt-3">
+                        Belum punya akun?
+                        <span id="toRegister" class="text-blue-600 cursor-pointer">Daftar</span>
+                      </p>
+                    </div>
 
-      <!-- Logo -->
-      <img class="w-32" src="img/logo-1.svg" alt="Logo"> 
+                    <!-- REGISTER FORM -->
+                    <div id="registerForm" class="hidden">
+                      <h2 class="text-2xl font-bold mb-4 text-center">Buat Akun</h2>
+                      <input type="text" placeholder="Nama Lengkap" class="input-auth">
+                      <input type="email" placeholder="Email" class="input-auth">
+                      <input type="password" placeholder="Password" class="input-auth">
+                      <button class="btn-secondary w-full mt-3">Daftar</button>
+                      <p class="text-sm text-center mt-3">
+                        Sudah punya akun?
+                        <span id="toLogin" class="text-blue-600 cursor-pointer">Masuk</span>
+                      </p>
+                    </div>
 
-      <!-- Mobile button: muncul sm ke atas hingga lg-1 -->
-      <div class="lg:hidden flex items-center">
-        <button id="menu-toggle" class="text-gray-700 focus:outline-none focus:text-gray-900">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-        </button>
+                  </div>
+                </div>
+
+             <div class="fixed top-0 left-0 w-full hidden h-full z-40 sidebar-overlay"></div>
+            </div>
+        </div>
+ </header>
+  <!-- hero start -->
+  <section id="hero" class="">
+    <div class="container md:pt-[40px] mx-auto">
+      <div class="grid lg:grid-cols-12 grid-cols-1 lg:gap-10 gap-0">
+        <div class="col-span-7 flex flex-col justify-center mb-10">
+          <h1 class="headline">
+           Buat <span class=" text-primary">roadmap</span>, temukan <span class=" text-primary">ilmu baru</span>, dan berbagi <span class=" text-primary">pengalaman.</span>
+          </h1>
+          <p class="pragraf mt-3">Berlatih dengan soal terkurasi, simulasi ujian real-time, dan laporan performa instan untuk membantu kamu mempersiapkan ujian dengan lebih percaya diri.</p>
+          <div class="flex btn-group gap-2 mt-5">
+            <a href="#relawan"><button class="btn-primary">Bagikan Pengalamanmu</button></a>
+            <a href="#product"><button class="btn-secondary"> Explore Materi Belajar</button></a>
+          </div>
+          <div class="flex gap-2 mt-5">
+            <img src="img/lomba-hero-item.svg" alt="audions" class="w-32">
+            <h4 class=" text-[16px] text-colorBlack font-medium">Dipercaya oleh 5.000+ Learner & Mentor</h4>
+          </div>
+        </div>
+        <div  class="col-span-5 space-y-5 lg:block hidden">
+          <img class="w-full" src="img/lomba-(hero).svg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- hero end -->
+  <!-- service start -->
+  <section id="service">
+    <div class="container lg:pt-[120px] pt-[40px] mx-auto">
+      <div class="lg:flex justify-between">
+        <h1 class="title">Berbagai Fitur untuk Belajar dan Berbagi Pengetahuan</h1>
+        <p class="pragraf max-w-xl lg:mt-10 mt-2 lg:text-end">Temukan berbagai fitur yang mendukung proses belajar, berbagi roadmap, dan mengajar dalam satu ekosistem pembelajaran berbasis komunitas.</p>
+      </div>
+      <div class="overflow-x-auto hide-scrollbar lg:overflow-x-hidden mt-2 lg:mt-0 max-w-full overflow-y-hidden">
+        <div class="flex lg:grid lg:grid-cols-4 gap-5 mt-10 min-w-[800px] lg:min-w-0 px-2">
+          <div  class="card">
+            <div class="card-service">
+              <h4>01</h4>
+            </div>
+            <h1 class="subtitle-service mt-2">Upload Roadmap Belajar</h1>
+            <p class="pragraf mt-1 line-clamp-3">Bagikan roadmap belajarmu agar orang lain belajar dengan arah yang jelas dan sistematis.</p>
+          </div>
+          <div  class="card">
+            <div class="card-service">
+              <h4>02</h4>
+            </div>
+            <h1 class="subtitle-service mt-2">Room Diskusi Interaktif</h1>
+            <p class="pragraf mt-1 line-clamp-3">Bergabung di ruang diskusi untuk bertanya dan berbagi bersama komunitas kami.</p>
+          </div>
+          <div  class="card">
+             <div class="card-service">
+              <h4>03</h4>
+            </div>
+            <h1 class="subtitle-service mt-2">Materi Blog & Video</h1>
+            <p class="pragraf mt-1 line-clamp-3">Akses materi artikel dan video untuk memahami setiap tahap roadmap secara mendalam.</p>
+          </div>
+          <div  class="card">
+             <div class="card-service">
+              <h4>04</h4>
+            </div>
+            <h1 class="subtitle-service mt-2">Jasa Private Class</h1>
+            <p class="pragraf mt-1 line-clamp-3">Roadmap creator dapat membuka kelas private untuk membimbing peserta secara terarah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- service end -->
+  <!-- about start -->
+  <section id="about" class="">
+    <div class="container pt-[120px] mx-auto">
+      <div class="grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-5 col-span-8 flex flex-col justify-center"><img class="w-full" src="img/lomba-about.svg" alt=""></div>
+        <div class="col-span-7 lg:mt-10">
+          <h1 class="title">Satu Platform untuk <span class="text-primary">Belajar, Berbagi Ilmu,</span> dan <span class="text-primary"> Bertumbuh</span> Bersama</h1>
+          <p  class="pragraf mt-3 line-clamp-3">Skill Exchange adalah platform pembelajaran berbasis video/blog yang memungkinkan siapa saja belajar gratis, membagikan roadmap terstruktur, dan membuka kelas private untuk berbagi keahlian.</p>
+          <div class="flex btn-group gap-2 mt-5">
+              <a href="#relawan"><button class="btn-primary">Mulai Langkah Belajarmu</button></a>
+              <a href="#product"><button class="btn-secondary">Jelajahi Roadmap Pembelajaran</button></a>
+          </div>
+        </div>    
+      </div>
+    </div>
+  </section>
+  <!-- about end -->
+  <!-- package start -->
+  <section id="package" class="">
+    <div class="container pt-[120px] mx-auto">
+      <div class="lg:flex justify-between">
+        <h1  class=" title">Category Pembelajaran Yang Bisa Kamu Coba</h1>
+         <div class="relative  ">
+          <i class="fa-solid fa-magnifying-glass text-[16px] text-[rgba(1,1,1,0.62)] absolute top-[26px] left-3 -translate-y-1/2"></i>
+          <input
+            id="searchInput"
+            type="text"
+            class="input-pesan placeholder:text-colorBlack placeholder:text-sm placeholder:text-colorBlack text-colorBlack "
+            placeholder="Cari Kategori Anda"
+          >
+        </div>
+      </div>
+    
+     <div class="overflow-x-auto hide-scrollbar lg:overflow-x-hidden mt-2 lg:mt-0 max-w-full overflow-y-hidden">
+       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0">
+        <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>01</h4>
+              </div>
+              <h3 class="subtitle-service mt-2">Teknologi</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Bagikan roadmap belajarmu agar orang lain belajar dengan arah yang jelas dan sistematis.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">30 Roadmap</h6>
+          </div>
+          <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>04</h4>
+              </div>
+              <h3 class="subtitle-service mt-2">Design</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Kuasai pemahaman seputar UI/UX, desain grafis, hingga desain produk digital dalam proses belajar anda.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">30 Roadmap</h6>
+          </div>
+           <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>02</h4>
+              </div>
+              <h3 class="subtitle-service mt-2">Bisnis</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Pelajari strategi bisnis, manajemen, dan kewirausahaan hingga memahami kompetitor bisnis.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">10 Roadmap</h6>
+          </div>
+           <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>03</h4>
+              </div>
+              <h3 class="subtitle-service mt-2">Digital Marketing</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Pahami social media, content marketing, dan digital advertising hingga dapat menarik customer.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">15 Roadmap</h6>
+          </div>
+           
+      </div>
+       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0">
+        <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>01</h4>
+              </div>
+              <h3 class="subtitle-service mt-2">Teknologi</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Bagikan roadmap belajarmu agar orang lain belajar dengan arah yang jelas dan sistematis.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">30 Roadmap</h6>
+          </div>
+          <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>04</h4>
+              </div>
+              <h3 class="subtitle-service mt-2">Design</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Kuasai pemahaman seputar UI/UX, desain grafis, hingga desain produk digital dalam proses belajar anda.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">30 Roadmap</h6>
+          </div>
+           <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>02</h4>
+              </div>
+              <h3 class="subtitle-service mt-2">Bisnis</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Pelajari strategi bisnis, manajemen, dan kewirausahaan hingga memahami kompetitor bisnis.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">10 Roadmap</h6>
+          </div>
+           <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>03</h4>
+              </div>
+              <h3 class="subtitle-service mt-2">Digital Marketing</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Pahami social media, content marketing, dan digital advertising hingga dapat menarik customer.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">15 Roadmap</h6>
+          </div>
+      </div>
+     </div>
+     <div  class="flex justify-center mt-10">
+      <a href="all-package.html"><button class="btn-primary">Lihat Semua Kategori</button></a>
+    </div>
+    </div>
+  </section>
+  <!-- package end -->
+  <!-- why start -->
+    <section id="why" class="pt-[120px]">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-6">
+            <h2 class="title mb-4">
+              Mengapa Platform Ini Cocok Untukmu?
+            </h2>
+            <p class="pragraf mb-8">
+              Tidak semua platform belajar memberikan arah yang jelas. Di sini, kamu
+              tidak hanya belajar — kamu berkembang bersama komunitas.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="flex items-start gap-3">
+                <div class="mt-1">
+                  <div class="w-5 h-5 flex items-center justify-center rounded bg-primary text-white text-xs">
+                    ✓
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-colorBlack font-semibold">
+                    Roadmap Terstruktur
+                  </h4>
+                  <p class="text-paragraf text-sm">
+                    Alur belajar jelas dan sistematis setiap tahap.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="mt-1">
+                  <div class="w-5 h-5 flex items-center justify-center rounded bg-primary text-white text-xs">
+                    ✓
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-colorBlack font-semibold">
+                    Fleksibel & Terbuka
+                  </h4>
+                  <p class="text-paragraf text-sm">
+                    Bisa belajar sekaligus mengajar tanpa batas.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="mt-1">
+                  <div class="w-5 h-5 flex items-center justify-center rounded bg-primary text-white text-xs">
+                    ✓
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-colorBlack font-semibold">
+                    Berbasis Komunitas
+                  </h4>
+                  <p class="text-paragraf text-sm">
+                    Diskusi aktif dan saling dukung secara konsisten.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="mt-1">
+                  <div class="w-5 h-5 flex items-center justify-center rounded bg-primary text-white text-xs">
+                    ✓
+                  </div>
+                </div>
+                <div>
+                  <h4 class="text-colorBlack font-semibold">
+                    Akses Gratis
+                  </h4>
+                  <p class="text-paragraf text-sm">
+                    Materi berkualitas tanpa biaya tambahan apapun.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-6">
+            <img 
+              src="img/lomba-why.svg" 
+              alt="why image"
+              class="w-full h-auto rounded-lg"
+            />
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- why end -->
+      <!-- roadmap start -->
+  <section id="roadmap" class="">
+    <div class="container pt-[120px] mx-auto">
+      <div class="lg:flex justify-between">
+        <h1  class=" title">Jelajahi Roadmap Pembelajaran Kami</h1>
+        <p  class="pragraf max-w-lg lg:mt-10 mt-2 lg:text-end">Temukan berbagai roadmap terstruktur yang dibuat oleh komunitas untuk membantu kamu belajar lebih terarah dan sistematis.</p>
+      </div>
+     <div class="overflow-x-auto hide-scrollbar lg:overflow-x-hidden mt-2 lg:mt-0 max-w-full overflow-y-hidden">
+       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0">
+          <div  class="card">
+            <img src="img/roadmap-uiux.svg" alt="roadmap UIUX">
+            <h6 class="text-[16px] text-primary mt-2">Desain UIUX</h6>
+            <h1 class="subtitle-service mt-1">UI/UX Untuk Pemula</h1>
+            <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">Dasar desain hingga prototyping interaktif pada user.</p>
+          </div>
+         <div  class="card">
+            <img src="img/roadmap-front.svg" alt="roadmap FE">
+            <h6 class="text-[16px] text-primary mt-2">Teknologi</h6>
+            <h1 class="subtitle-service mt-1">Front-End Dev</h1>
+            <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">Dasar Pembelajaran HTML, CSS, JavaScript untuk pemula.</p>
+          </div>
+          <div  class="card">
+            <img src="img/roadmap-marketing.svg" alt="roadmap">
+            <h6 class="text-[16px] text-primary mt-2">Marketing</h6>
+            <h1 class="subtitle-service mt-1">Digital Marketing </h1>
+            <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">Tips/Strategi konten dan pengiklanan product digital yang bermanfaat.</p>
+          </div>
+          <div  class="card">
+            <img src="img/roadmap-data.svg" alt="roadmap">
+            <h6 class="text-[16px] text-primary mt-2">Data</h6>
+            <h1 class="subtitle-service mt-1">Data Analysis</h1>
+            <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">Mempelajari Dasar pengolahan dan visualisasi data.</p>
+          </div>
+      </div>
+       
+     </div>
+     <div  class="flex justify-center mt-10">
+      <a href="all-roadmap.html"><button class="btn-primary">Lihat Lebih Banyak</button></a>
+    </div>
+    </div>
+  </section>
+  <!-- roadmap end -->
+ <!-- TESTIMONI START -->
+<section id="testimoni" class="pt-[120px]">
+  <div class="container mx-auto px-4">
+    <div class="lg:flex justify-between">
+        <h1  class="text-2xl md:text-3xl lg:text-4xl font-semibold text-colorBlack leading-snug"> Dipercaya oleh Ribuan Pembelajar untuk Mengembangkan Skill</h1>
+        <p  class="pragraf max-w-lg lg:mt-10 mt-2 lg:text-end"> Cerita nyata dari para learner dan mentor yang berkembang bersama melalui roadmap terstruktur dan komunitas kolaboratif.</p>
+    </div>
+    <div class="swiper mySwiper mt-10">
+      <div class="swiper-wrapper pb-12">
+        <div class="swiper-slide">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 h-full">
+            <div class="text-primary text-xl mb-3"> <i class="fa-solid fa-quote-left"></i></div>
+            <p class="text-paragraf text-sm mb-6">
+              Roadmap-nya terstruktur dan jelas, jadi saya tahu harus mulai dari mana dengan percaya diri.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="img/tetsi-1.svg" class="w-10 h-10 rounded-full" alt="">
+              <div>
+                <h4 class="text-sm font-semibold text-colorBlack">Daniel Risky</h4>
+                <p class="text-xs text-paragraf">Pelajar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 h-full">
+            <div class="text-primary text-xl mb-3"> <i class="fa-solid fa-quote-left"></i></div>
+            <p class="text-paragraf text-sm mb-6">
+              Fitur diskusinya membantu dan komunitasnya sangat suportif setiap waktu.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="img/testi-2.svg" class="w-10 h-10 rounded-full" alt="">
+              <div>
+                <h4 class="text-sm font-semibold text-colorBlack">Anita Sinta</h4>
+                <p class="text-xs text-paragraf">Pelajar</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 h-full">
+            <div class="text-primary text-xl mb-3"> <i class="fa-solid fa-quote-left"></i></div>
+            <p class="text-paragraf text-sm mb-6">
+              Saya mengunggah roadmap dan banyak yang mengikuti. Kini saya juga membuka kelas private.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="img/testi-3.svg" class="w-10 h-10 rounded-full" alt="">
+              <div>
+                <h4 class="text-sm font-semibold text-colorBlack">Kevin Jaya</h4>
+                <p class="text-xs text-paragraf">Pelajar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 h-full">
+            <div class="text-primary text-xl mb-3"> <i class="fa-solid fa-quote-left"></i></div>
+            <p class="text-paragraf text-sm mb-6">
+              Materinya ringkas dan mudah dipahami, kombinasi artikel dan video sangat membantu.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="img/testi-4.svg" class="w-10 h-10 rounded-full" alt="">
+              <div>
+                <h4 class="text-sm font-semibold text-colorBlack">Jian Sanca</h4>
+                <p class="text-xs text-paragraf">Pelajar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+         <div class="swiper-slide">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 h-full">
+            <div class="text-primary text-xl mb-3"> <i class="fa-solid fa-quote-left"></i></div>
+            <p class="text-paragraf text-sm mb-6">
+              Roadmap-nya terstruktur dan jelas, jadi saya tahu harus mulai dari mana dengan percaya diri.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="img/tetsi-1.svg" class="w-10 h-10 rounded-full" alt="">
+              <div>
+                <h4 class="text-sm font-semibold text-colorBlack">Daniel Risky</h4>
+                <p class="text-xs text-paragraf">Pelajar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 h-full">
+            <div class="text-primary text-xl mb-3"> <i class="fa-solid fa-quote-left"></i></div>
+            <p class="text-paragraf text-sm mb-6">
+              Fitur diskusinya membantu dan komunitasnya sangat suportif setiap waktu.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="img/testi-2.svg" class="w-10 h-10 rounded-full" alt="">
+              <div>
+                <h4 class="text-sm font-semibold text-colorBlack">Anita Sinta</h4>
+                <p class="text-xs text-paragraf">Pelajar</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 h-full">
+            <div class="text-primary text-xl mb-3"> <i class="fa-solid fa-quote-left"></i></div>
+            <p class="text-paragraf text-sm mb-6">
+              Saya mengunggah roadmap dan banyak yang mengikuti. Kini saya juga membuka kelas private.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="img/testi-3.svg" class="w-10 h-10 rounded-full" alt="">
+              <div>
+                <h4 class="text-sm font-semibold text-colorBlack">Kevin Jaya</h4>
+                <p class="text-xs text-paragraf">Pelajar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="bg-white border border-gray-200 rounded-lg p-5 h-full">
+            <div class="text-primary text-xl mb-3"> <i class="fa-solid fa-quote-left"></i></div>
+            <p class="text-paragraf text-sm mb-6">
+              Materinya ringkas dan mudah dipahami, kombinasi artikel dan video sangat membantu.
+            </p>
+            <div class="flex items-center gap-3">
+              <img src="img/testi-4.svg" class="w-10 h-10 rounded-full" alt="">
+              <div>
+                <h4 class="text-sm font-semibold text-colorBlack">Jian Sanca</h4>
+                <p class="text-xs text-paragraf">Pelajar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="swiper-scrollbar custom-pagination max-w-xs"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TESTIMONI END -->
+<!-- CTA START -->
+<section id="cta" class="py-16">
+  <div class="container mx-auto px-4">
+    <div class="relative">
+        <div class="hidden lg:block absolute left-0 bottom-0">
+        <img 
+          src="img/cta.svg" 
+          alt="cta image"
+          class="w-[350px] xl:w-[420px]"
+        />
+      </div>
+    <div class=" bg-[#F4F6F8] rounded-xl p-6 md:p-8 h-[280px] overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="hidden lg:block lg:col-span-5"></div>
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-colorBlack leading-snug mb-4">
+            Mulai Perjalanan Belajarmu <br class="hidden sm:block">
+            Sekarang Juga
+          </h2>
+          <p class="text-paragraf mb-6 max-w-xl mx-auto lg:mx-0">
+            Jangan hanya belajar tanpa arah. Bergabunglah bersama komunitas pembelajar dan mulai kembangkan skill-mu melalui roadmap terstruktur hari ini.
+          </p>
+          <div class="flex btn-group flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <button class="btn-primary">
+              Mulai Pembelajaran Sekarang
+            </button>
+            <button class="btn-secondary">
+              Jelajahi Roadmap Pembelajaran
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden lg:hidden px-10">
-    <div class="px-4 pt-4 pb-2 space-y-2 bg-secondary w-full rounded-lg">
-      <ul class="space-y-2 flex-col justify-center items-center text-center ">
-        <li><a href="#hero" class="nav">Beranda</a></li>
-        <li><a href="#event" class="nav">Event</a></li>
-        <li><a href="#about" class="nav">Tentang</a></li>
-        <li><a href="#testimonial" class="nav">Review</a></li>
-      </ul>
-    </div>
   </div>
-</nav>
-    <!-- navbar end -->
-    <div  data-aos="fade-right" data-aos-duration="1000" class=" absolute inset-x-0 bottom-0">
-      <div class=" container mx-auto mb-10">
-        <h1 class="headline">Temukan Tantangan Olahragamu Berikutnya</h1>
-        <p class="text-sm text-[#FBFBFB] max-w-md mt-3"> Ikuti event lari, turnamen, dan kompetisi seru untuk semua kalangan – dari pemula hingga profesional.</p>
-        <div class="flex gap-2 mt-5">
-          <button class="bg-secondary text-primary w-40 py-2 text-sm rounded-full hover:brightness-125 duration-300 box-border">Lihat Event</button>
-          <button class="border-[1.5px] border-secondary text-secondary w-40 py-2 text-sm rounded-full hover:bg-secondary hover:text-primary duration-300 box-border">Daftar Sekarang</button>
-        </div>
-      </div>
-    </div>
-      <img class="w-full h-screen object-cover" src="./img/hero.avif" alt="">
-   </section>
-  <!-- hero section -->
-  <!-- About section -->
-   <section id="about">
-    <div class="container mx-auto pt-[120px]">
-      <div class="grid lg:grid-cols-12 grid-cols-1 gap-5">
-        <div data-aos="fade-right" data-aos-duration="800" class="col-span-5">
-          <div class="section">About Us</div>
-          <h1 class="title mt-5">Temukan Tantangan Olahragamu Berikutnya</h1>
-          <p class="paragraf mt-3 line-clamp-2">Ikuti event lari, turnamen, dan kompetisi seru untuk semua kalangan – dari pemula hingga profesional.</p>
-          <button class="btn-primary mt-5">Lihat Event</button>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="800" class="col-span-7">
-         <div class="lg:flex gap-5">
-           <div class="relative">
-            <div class="absolute px-5">
-              <div class="border-2 border-secondary rounded-full px-5 py-2 w-max mt-5 text-secondary">
-                <p class="text-xs">Outdoor Sports</p>
-              </div>
-              <div class="flex justify-between lg:mt-36 mt-32">
-                <h1 class="lg:text-3xl text-2xl max-w-md text-secondary font-bebas">Olahraga Luar Ruangan: Sehat & Menyatu dengan Alam</h1>
-                <div class="bg-secondary rounded-full p-3 h-max mt-5"><img src="./img/panah.svg" alt=""></div>
-              </div>
-            </div>
-            <img src="./img/about.avif" alt="">
-          </div>
-          <div class="lg:mt-0 mt-5">
-            <div class="absolute px-5 ">
-              <div class="border-2 border-secondary rounded-full px-5 py-2 w-max mt-5 text-secondary">
-                <p class="text-xs">Racket Sports</p>
-              </div>
-            </div>
-            <img src="./img/about-2.avif" alt="">
-            <h1 class="text-3xl text-primary font-bebas mt-3">Ketepatan, Kecepatan, dan Strategi</h1>
-            <p class="paragraf">Racket sports melatih konsentrasi, strategi, dan koordinasi tubuh </p>
-          </div>
-         </div>
-       </div>
-      </div>
-    </div>
-   </section>
-  <!-- About section -->
-  <!-- Event section -->
-    <section id="event" class="container mx-auto pt-[120px]">
+</section>
+<!-- CTA END -->
+
+  <!-- faq start -->
+  <section id="faq" class="">
+    <div class="container py-[120px] mx-auto">
       <div class="lg:flex justify-between">
-        <div data-aos="fade-right" data-aos-duration="800" >
-          <div class="section">Event</div>
-          <h1 class="title mt-5 max-w-lg">Event Pilihan untuk Menambah Pengalamanmu</h1>
-        </div>
-        <p data-aos="fade-left" data-aos-duration="800"  class="paragraf max-w-xl lg:mt-20 mt-5 line-clamp-2">Temukan berbagai event menarik, dari olahraga hingga hiburan, yang bisa diikuti untuk menambah pengalaman dan keseruanmu.</p>
+        <h1  class=" title">Pertanyaan Umum Seputar Skill Exchange</h1>
+        <p class="pragraf max-w-lg lg:mt-10 mt-2 lg:text-end">Temukan jawaban tentang cara belajar, mengunggah roadmap, dan membuka kelas di platform kami.</p>
       </div>
-      <div class="mt-10">
-          <div class="swiper testiSwiper mt-10">
-            <div class="swiper-wrapper mb-10">
-              <div data-aos="fade-right" data-aos-duration="300"  class="swiper-slide">
-                  <a href="detail-event.html"><img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-1.svg" alt="">   </a>        
-              </div>
-              <div data-aos="fade-right" data-aos-duration="500"  class="swiper-slide">
-                  <img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-2.svg" alt="">           
-              </div>
-                <div data-aos="fade-right" data-aos-duration="700"  class="swiper-slide">
-                  <img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-3.svg" alt="">           
-              </div>
-              <div data-aos="fade-right" data-aos-duration="1000"  class="swiper-slide">
-                  <img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-4.svg" alt="">           
-              </div>
-                <div class="swiper-slide">
-                  <img class="w-full hover:scale-95 ease-in-out transition duration-300 " src="./img/event-5.svg" alt="">           
-              </div>
-                <div class="swiper-slide">
-                  <img class="w-full" src="./img/event-3.svg" alt="">           
-              </div>
-            </div>
-             <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-  <!-- Event section -->
-  <!-- Jadwal Section -->
-   <section id="jadwal">
-    <div class="container mx-auto pt-[120px]">
-      <div class="grid lg:grid-cols-12 grid-cols-1 gap-10">
-        <div  data-aos="fade-right" data-aos-duration="800"  class="col-span-6">
-          <img class="w-full" src="./img/jadwal.svg" alt="">
-       </div>
-        <div data-aos="fade-left" data-aos-duration="800"  class="col-span-6">
-          <div class="section">Schedule</div>
-          <h1 class="title mt-5">Yuk, Intip Jadwal Acaranya dan Tentukan Kapan Kamu Mau Ikutan!</h1>
-          <p class="paragraf mt-3 line-clamp-2">Beragam acara seru sudah menanti kamu! Mulai dari pembukaan hingga penutupan, semuanya dirancang untuk memberikan pengalaman terbaik.</p>
-          <div class="swiper mySwiper w-full mt-10">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class=" card w-full">
-                  <h1 class="text-2xl text-primary font-bebas">Event Terdekat Minggu Ini</h1>
-                  <div class="px-3 space-y-1 mt-2">
-                    <p class="text-sm text-primary">🗓️  15 Oktober 2025</p>
-                    <p class="text-sm text-primary">🏃‍♂  Fun Run Bali 2025</p>
-                    <p class="text-sm text-primary">📍  Lapangan Renon, Denpasar</p>
-                  </div>
-                  <a href=""> <button class="bg-primary text-white w-32 py-2 text-xs mt-5 rounded-full font-medium hover:brightness-100 duration-300 box-border">Daftar Sekarang</button></a>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class=" card w-full">
-                  <h1 class="text-2xl text-primary font-bebas"> Event Populer</h1>
-                  <div class="px-3 space-y-1 mt-2">
-                    <p class="text-sm text-primary">🗓️  20 Oktober 2025</p>
-                    <p class="text-sm text-primary">🧘  Yoga Marathon 2025</p>
-                    <p class="text-sm text-primary">📍 Pantai Sanur, Bali</p>
-                  </div>
-                  <a href=""> <button class="bg-primary text-white w-32 py-2 text-xs mt-5 rounded-full font-medium hover:brightness-100 duration-300 box-border">Daftar Sekarang</button></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   </section>
-    <!-- Jadwal Section -->
-    <!-- Momen Section -->
-    <section>
-      <div class="container mx-auto pt-[120px]">
-        <div class="grid lg:grid-cols-12 gap-5">
-          <div data-aos="fade-right" data-aos-duration="800"  class="lg:col-span-5 col-span-6">
-            <div class="section">Momen</div>
-            <h1 class="title mt-5 max-w-md">Tangkap Setiap Momen Tak Terlupakan</h1>
-            <p class="paragraf mt-3 max-w-sm">Dari awal sampai akhir, semua momen seru siap untuk kamu nikmati di sini.</p>
-            <button class="btn-primary mt-5">Lihat Event</button>
-          </div>
-          <div data-aos="fade-left" data-aos-duration="800"  class="col-span-7">
-            <div class="flex gap-5">
-              <img class="w-[400px]" src="./img/momen-1.avif" alt="">
-              <div class="space-y-5 lg:block hidden">
-                <img class="w-80" src="./img/momen-2.avif" alt="">
-                <img class="w-80" src="./img/momen-3.avif" alt="">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Momen Section -->
-   <!-- faq Section -->
-   <section id="faq">
-      <div class="container mx-auto pt-[120px]">
-      <div class="lg:flex justify-between">
-        <div data-aos="fade-right" data-aos-duration="800" >
-          <div class="section">Faq</div>
-          <h1 class="title mt-5 max-w-lg">Butuh Bantuan? Temukan Jawabannya di Sini</h1>
-        </div>
-        <p data-aos="fade-left" data-aos-duration="800"  class="paragraf max-w-xl lg:mt-20 mt-5 line-clamp-2">Punya pertanyaan soal cara ikut event, daftar lomba, atau buat event? Semua jawabannya ada biar kamu gak bingung lagi!</p>
-      </div>
-      <div class="grid lg:grid-cols-12 grid-cols-1 gap-10 lg:mt-10 mt-5">
-        <div data-aos="fade-right" data-aos-duration="800"  class="col-span-6">
+      <div class="grid lg:grid-cols-12 lg:gap-5 mt-2 lg:mt-10">
+        <div class="col-span-6">
           <div class="items-center lg:mt-0 mt-5">
-          <div class="relative mb-3 card-faq">
+          <div n="400" data-aos-delay="100" class="relative mb-3 card-faq">
               <h6 class="mb-0">
                 <button
                   class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
                   data-collapse-target="animated-collapse-1"
                 >
-                  <span class="title-accordion">Apakah info event selalu diperbarui?</span>
-                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                  <span class="title-accordion"> Bagaimana cara mulai belajar di Skill Exchange?</span>
+                  <i class="absolute right-0 pt-2 text-xs bg-paket1 py-[5px] px-2 text-white bg-primary rounded-sm transition-transform fa fa-chevron-down group-open:rotate-180"></i>
                 </button>
               </h6>
               <div
                 data-collapse="animated-collapse-1"
                 class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
-                <div class="paragraf-accordion">
-                 Ya! Tim kami rutin memperbarui data event agar kamu selalu mendapatkan informasi terbaru dan akurat, mulai dari jadwal, lokasi, hingga kontak penyelenggara.
+                <div class="pragraf-accordion mb-1">
+                  Cukup daftar akun, pilih kategori atau roadmap yang kamu minati, lalu mulai belajar sesuai alur yang tersedia.
                 </div>
               </div>
           </div>
-          <div class="relative mb-3 card-faq">
+          <div n="450" data-aos-delay="100" class="relative mb-3 card-faq">
               <h6 class="mb-0">
                 <button
                   class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
                   data-collapse-target="animated-collapse-2"
                 >
-                  <span class="title-accordion">Apakah platform ini gratis?</span>
-                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                  <span class="title-accordion">Apakah semua roadmap bisa diakses gratis?</span>
+                  <i class="absolute right-0 pt-2 text-xs bg-paket1 py-[5px] px-2 text-white bg-primary rounded-sm transition-transform fa fa-chevron-down group-open:rotate-180"></i>
                 </button>
               </h6>
               <div
                 data-collapse="animated-collapse-2"
                 class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
-                <div class="paragraf-accordion">
-                 Ya, semua informasi bisa kamu akses secara gratis. Kami ingin mendukung semangat olahraga dengan menyediakan wadah informasi yang terbuka untuk semua.
+                <div class="pragraf-accordion mb-1">
+                  Yep, semua roadmap dapat diakses secara gratis dan pengguna tidak perlu membayar apapun 
                 </div>
               </div>
           </div>
-          <div class="relative mb-3 card-faq">
+          <div n="500" data-aos-delay="100" class="relative mb-3 card-faq">
               <h6 class="mb-0">
                 <button
                   class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
                   data-collapse-target="animated-collapse-3"
                 >
-                  <span class="title-accordion">Apakah ada notifikasi untuk event baru?</span>
-                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                 <div class="max-w-md">
+                   <span class="title-accordion">Apakah roadmap yang diunggah akan ditinjau terlebih dahulu oleh tim platform?</span>
+                 </div>
+                  <i class="absolute right-0 pt-2 text-xs bg-paket1 py-[5px] px-2 text-white bg-primary rounded-sm transition-transform fa fa-chevron-down group-open:rotate-180"></i>
                 </button>
               </h6>
               <div
                 data-collapse="animated-collapse-3"
                 class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
-                <div class="paragraf-accordion">
-                 Ya, kalau kamu sudah login dan mengaktifkan notifikasi, kami akan mengirim pemberitahuan setiap kali ada event olahraga baru sesuai minatmu.
+                <div class="pragraf-accordion mb-1">
+                Ya, setiap roadmap yang diunggah akan melalui proses peninjauan oleh tim untuk memastikan kualitas dan kesesuaian dengan standar platform.
                 </div>
               </div>
           </div>
-          <div class="relative mb-3 card-faq">
+          </div>
+        </div>
+        <div class="col-span-6">
+          <div class="items-center lg:mt-0 mt-0">
+             <div n="550" data-aos-delay="100" class="relative mb-3 card-faq">
               <h6 class="mb-0">
                 <button
                   class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
                   data-collapse-target="animated-collapse-4"
                 >
-                  <span class="title-accordion">Bagaimana cara ikut event?</span>
-                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                  <span class="title-accordion">Apakah saya bisa membuka kelas private?</span>
+                  <i class="absolute right-0 pt-2 text-xs bg-paket1 py-[5px] px-2 text-white bg-primary rounded-sm transition-transform fa fa-chevron-down group-open:rotate-180"></i>
                 </button>
               </h6>
               <div
                 data-collapse="animated-collapse-4"
                 class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
-                <div class="paragraf-accordion">
-             Kamu bisa langsung pilih event yang kamu minati di halaman utama atau bagian “Jadwal Event”. Setelah itu, klik tombol “Daftar Sekarang” pada detail event tersebut.
+                <div class="pragraf-accordion mb-1">
+                  Ya, kamu bisa membuka kelas private dan mengatur siapa saja yang dapat mengaksesnya, seperti hanya untuk pengguna tertentu atau melalui undangan.
                 </div>
               </div>
           </div>
-          <div class="relative mb-3 card-faq">
+           <div n="600" data-aos-delay="100" class="relative mb-3 card-faq">
               <h6 class="mb-0">
                 <button
                   class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
                   data-collapse-target="animated-collapse-5"
                 >
-                  <span class="title-accordion">Apakah saya bisa membagikan event ke teman?</span>
-                  <i class="absolute right-0 pt-2 text-sm bg-paket1 py-[10px] px-2.5 text-primary  rounded-full transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                  <span class="title-accordion">Apakah saya harus punya pengalaman untuk berbagi roadmap?</span>
+                  <i class="absolute right-0 pt-2 text-xs bg-paket1 py-[5px] px-2 text-white bg-primary rounded-sm transition-transform fa fa-chevron-down group-open:rotate-180"></i>
                 </button>
               </h6>
               <div
                 data-collapse="animated-collapse-5"
                 class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
               >
-                <div class="paragraf-accordion">
-            Bisa! Setiap event memiliki tombol Bagikan, sehingga kamu bisa langsung membagikannya ke WhatsApp, Instagram, atau media sosial lainnya.
+                <div class="pragraf-accordion mb-1">
+                  Tidak harus, namun sangat disarankan memiliki pemahaman atau pengalaman di bidang yang dibagikan agar roadmap yang dibuat lebih bermanfaat bagi pengguna lain.
+                </div>
+              </div>
+          </div>
+          <div n="650" data-aos-delay="100" class="relative mb-3 card-faq">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
+                  data-collapse-target="animated-collapse-6"
+                >
+                  <span class="title-accordion">Apakah tersedia fitur diskusi?</span>
+                  <i class="absolute right-0 pt-2 text-xs bg-paket1 py-[5px] px-2 text-white bg-primary rounded-sm transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-6"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="pragraf-accordion mb-1">
+                  Ya, tersedia fitur diskusi yang memungkinkan pengguna untuk bertanya, berbagi pendapat, dan berdiskusi terkait roadmap yang sedang dipelajari.
+                </div>
+              </div>
+          </div>
+          <div n="700" data-aos-delay="100" class="relative mb-3 card-faq">
+              <h6 class="mb-0">
+                <button
+                  class="relative flex items-center w-full py-3 font-semibold text-left transition-all ease-in  cursor-pointer border-slate-300 text-slate-700 rounded-t-1 group text-dark-500"
+                  data-collapse-target="animated-collapse-8"
+                >
+                  <span class="title-accordion">Apakah saya bisa mengedit roadmap setelah dipublikasikan?</span>
+                  <i class="absolute right-0 pt-2 text-xs bg-paket1 py-[5px] px-2 text-white bg-primary rounded-sm transition-transform fa fa-chevron-down group-open:rotate-180"></i>
+                </button>
+              </h6>
+              <div
+                data-collapse="animated-collapse-8"
+                class="h-0 overflow-hidden transition-all duration-300 ease-in-out"
+              >
+                <div class="pragraf-accordion mb-1">
+                 Ya, kamu tetap bisa mengedit roadmap setelah dipublikasikan. Perubahan yang dilakukan mungkin akan ditinjau kembali sebelum diperbarui di platform.
                 </div>
               </div>
           </div>
           </div>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="800"  class="col-span-6 lg:block hidden">
-          <img class="w-full" src="./img/faq.avif" alt="">
+         
         </div>
       </div>
     </div>
-   </section>
-  <!-- faq Section -->
-  <!-- testimoni Section -->
-   <section id="testimoni">
-    <div class="container mx-auto pt-[120px]">
-      <div class="section">Testimoni</div>
-      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
-        <div data-aos="fade-right" data-aos-duration="800"  class="card">
-          <div class="flex gap-2">
-            <img src="./img/testi-1.svg" alt="">
-            <div class="mt-4">
-              <h1 class="name">Melati Ayu</h1>
-              <p class="profile">Mahasiswi & Atlet Voli Kampus </p>
-            </div>
-          </div>
-          <p class="mt-3 komen">Sekarang saya bisa ikut berbagai turnamen voli tanpa perlu repot mencari informasi sendiri. Semua tersaji di satu tempat!</p>
-          <div class="flex justify-end">
-            <img src="./img/love.svg" alt="">
-          </div>
-        </div>
-        <div data-aos="fade-right" data-aos-duration="800"  class="card">
-          <div class="flex gap-2">
-            <img src="./img/testi-2.svg" alt="">
-            <div class="mt-4">
-              <h1 class="name">Andi Pratama</h1>
-              <p class="profile">Peserta Lomba Lari 10K</p>
-            </div>
-          </div>
-          <p class="mt-3 komen">Platform ini memudahkan saya menemukan lomba lari di kota saya. Semua info lengkap dan gampang diakses!</p>
-          <div class="flex justify-end">
-            <img src="./img/love.svg" alt="">
-          </div>
-        </div>
-        <div data-aos="fade-right" data-aos-duration="800"  class="card">
-          <div class="flex gap-2">
-            <img src="./img/testi-3.svg" alt="">
-            <div class="mt-4">
-              <h1 class="name">Sinta Maharani</h1>
-              <p class="profile"> Pelatih Fitness & Atlet Komunitas</p>
-            </div>
-          </div>
-          <p class="mt-3 komen">Saya bisa mengetahui berbagai event olahraga terbaru dan mendaftar tanpa ribet. Sangat membantu komunitas kami!"</p>
-          <div class="flex justify-end">
-            <img src="./img/love.svg" alt="">
-          </div>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="800"  class="card">
-          <div class="flex gap-2">
-            <img src="./img/testi-4.svg" alt="">
-            <div class="mt-4">
-              <h1 class="name">Rudi Hartono</h1>
-              <p class="profile">Komunitas Sepeda “Bali Cycling Club” </p>
-            </div>
-          </div>
-          <p class="mt-3 komen">Platform ini jadi andalan kami untuk menemukan event sepeda lokal maupun nasional. Sangat memudahkan anggota klub!</p>
-          <div class="flex justify-end">
-            <img src="./img/love.svg" alt="">
-          </div>
-        </div>
-        <div data-aos="fade-left" data-aos-duration="800"  class="card">
-          <div class="flex gap-2">
-            <img src="./img/testi-5.svg" alt="">
-            <div class="mt-4">
-              <h1 class="name">Rina Kusuma</h1>
-              <p class="profile">Instruktur Yoga & Kebugaran</p>
-            </div>
-          </div>
-          <p class="mt-3 komen">Platform ini memudahkan saya menemukan event olahraga yang sesuai minat peserta kelas saya. Sangat bermanfaat!</p>
-          <div class="flex justify-end">
-            <img src="./img/love.svg" alt="">
-          </div>
-        </div>
-        <div  data-aos="fade-left" data-aos-duration="800"  class="card lg:block hidden">
-          <div class="flex gap-2">
-            <img src="./img/testi-6.svg" alt="">
-            <div class="mt-4">
-              <h1 class="name">Putri Laras</h1>
-              <p class="profile">Mahasiswi Atletik Kampus</p>
-            </div>
-          </div>
-          <p class="mt-3 komen">Sekarang saya bisa ikut berbagai lomba atletik tanpa harus mencari-cari info sendiri. Semua tersedia lengkap di satu platform.</p>
-          <div class="flex justify-end">
-            <img src="./img/love.svg" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-   </section>
-  <!-- testimoni Section -->
-<!-- CTA Section -->
-<section id="cta" class="relative w-full py-20 overflow-hidden container mx-auto lg:mt-[120px] mt-10">
-  <!-- Background Image -->
-  <img src="./img/cta (1).webp" alt="Marathon CTA"
-    class="absolute inset-0 w-full h-full object-cover brightness-75">
-
-  <!-- Overlay content -->
-  <div class="relative z-10 max-w-6xl mx-auto px-4 flex flex-col items-center justify-center text-center">
-    <h1
-      class="text-secondary font-bebas leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-[65px]">
-      Gabung Sekarang, Wujudkan Kemenanganmu!
-    </h1>
-
-    <p
-      class="text-secondary mt-3 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-md md:max-w-lg lg:max-w-[500px]">
-      Dari awal sampai akhir, semua momen seru siap untuk kamu nikmati di sini.
-    </p>
-
-    <div class="flex flex-col sm:flex-row justify-center gap-3 mt-6 w-full sm:w-auto">
-      <button
-        class="bg-secondary text-primary px-6 py-2 text-sm sm:text-base rounded-full hover:brightness-125 duration-300">
-        Ayo Gabung!
-      </button>
-      <button
-        class="border border-secondary text-secondary px-6 py-2 text-sm sm:text-base rounded-full hover:bg-secondary hover:text-primary duration-300">
-        Lihat Jadwal
-      </button>
-    </div>
-  </div>
-</section>
-
-
+  </section>
+  <!-- faq end -->
   <!-- footer -->
-   <footer class="bg-[#181818]">
-    <div class="container mx-auto py-[50px] mt-32">
-      <div class="grid lg:grid-cols-12 md:grid-cols-8  lg:gap-0 gap-10">
-        <div class="col-span-5">
-          <img src="./img/logo.svg" alt="">
-          <p class="text-sm text-[#FBFBFB] mt-3 max-w-96">Connecting you with trusted service and support. Stay updated with our latest news and offers. Reach out anytime — we're here to help.</p>
-        </div>
-        <div class="col-span-2">
-          <h1 class="subtitle-footer">Social Media</h1>
-          <div class="space-y-[8px] mt-3">
-              <p class="paragraf-footer">Instagram</p>
-              <p class="paragraf-footer">Whatsapp</p>
-              <p class="paragraf-footer">Facebook</p>
-              <p class="paragraf-footer">Twiter</p>
+    <footer class="bg-[rgba(0,0,0,1)] pt-[40px]">
+      <div class="container mx-auto ">
+        <div class="grid lg:grid-cols-12 md:grid-cols-8 sm:grid-cols-2 gap-10">
+          <div class="lg:col-span-6 md:col-span-8 sm:col-span-2 text-center lg:text-left">
+            <img src="img/logo-2.svg" alt="Logo" class="mx-auto lg:mx-0 w-32 md:w-40">
+            <p class="text-sm text-[rgba(251,251,251,1)] mt-5 max-w-md mx-auto lg:mx-0">
+              Stay connected with us dan terus jadi bagian dari gerakan hijau! 
+              Temukan inspirasi, kegiatan, dan produk ramah lingkungan yang membawa dampak nyata bagi bumi.
+            </p>
+          </div>
+          <div class="lg:col-span-2 md:col-span-4 sm:col-span-1">
+            <h1 class="subtitle-footer font-semibold">Information</h1>
+            <div class="space-y-2 mt-3">
+              <p class="paragraf-footer cursor-pointer">Tentang Kami</p>
+              <p class="paragraf-footer cursor-pointer">Galeri Kegiatan</p>
+              <p class="paragraf-footer cursor-pointer">Produk Daur Ulang</p>
+              <p class="paragraf-footer cursor-pointer">Testimoni</p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 md:col-span-4 sm:col-span-1">
+            <h1 class="subtitle-footer font-semibold">Helpful Link</h1>
+            <div class="space-y-2 mt-3">
+              <p class="paragraf-footer cursor-pointer">Keanggotaan</p>
+              <p class="paragraf-footer cursor-pointer">Bantuan & Dukungan</p>
+              <p class="paragraf-footer cursor-pointer">Kebijakan Privasi</p>
+              <p class="paragraf-footer cursor-pointer">Syarat & Ketentuan</p>
+            </div>
+          </div>
+          <div class="lg:col-span-2 md:col-span-4 sm:col-span-1">
+            <h1 class="subtitle-footer font-semibold">Our Services</h1>
+            <div class="space-y-2 mt-3">
+              <p class="paragraf-footer cursor-pointer">Aksi Bersih Relawan</p>
+              <p class="paragraf-footer cursor-pointer">Rekrut Keanggotaan</p>
+              <p class="paragraf-footer cursor-pointer">Edukasi & Pembelajaran</p>
+              <p class="paragraf-footer cursor-pointer">Penjualan Hasil Pengrajin</p>
+            </div>
           </div>
         </div>
-        <div class="col-span-2">
-          <h1 class="subtitle-footer">Link</h1>
-          <div class="space-y-[8px] mt-3">
-              <p class="paragraf-footer">Home</p>
-              <p class="paragraf-footer">About</p>
-              <p class="paragraf-footer">Event</p>
-              <p class="paragraf-footer">Schedule</p>
-          </div>
-        </div>
-        <div class="col-span-3">
-          <h1 class="subtitle-footer">Contact Us</h1>
-          <div class="space-y-[8px] mt-3">
-             <div class="flex gap-3">
-                <i class="fa-regular fa-envelope text-lg text-[rgba(252,252,252,0.65)]"></i>
-               <p class="paragraf-footer">sportzone@gmail.com</p>
-             </div>
-             <div class="flex gap-3">
-                <i class="ri-phone-line text-lg text-[rgba(252,252,252,0.65)]"></i>
-                <p class="paragraf-footer">+62 894  774 523</p>
-             </div>
-             <div class="flex gap-3">
-                <i class="ri-customer-service-2-line text-lg text-[rgba(252,252,252,0.65)]"></i>
-                <p class="paragraf-footer">Need help?</p>
-             </div>
+        <div class="md:flex justify-between mt-32">
+          <p class="text-[15px] text-white">© Copyright by Atrem Project. All right reserved</p>
+          <div class="flex gap-5 md:mt-0 mt-5">
+            <h4 class="paragraf-footer">Privacy  Policy</h4>
+            <h4 class="paragraf-footer">Teams of use</h4>
+            <h4 class="paragraf-footer">Legal</h4>
           </div>
         </div>
       </div>
-      <hr class="border border-[rgba(252,252,252,0.1)] mt-[50px]">
-      <div class="md:flex justify-center mt-5">
-        <p class="text-[15px] text-white">© Copyright by Erpien. All right reserved</p>
-      </div>
-    </div>
-   </footer>
+    </footer>
+  <!-- footer -->
+
+<script src="swiper/swiper-bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="dist/js/lightbox-plus-jquery.js" defer></script>
+<script src="dist/js/lightbox.min.js" defer></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+<script src="js/animation.js" defer></script>
+<script src="js/script.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/filter.js"></script>
+
+<script defer>
   
-<script src="/src/swiper/swiper-bundle.min.js"></script>
-  <script src="./js/script.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init({
-    once: true,     // animasi hanya jalan sekali
+  document.addEventListener("DOMContentLoaded", () => {
+    AOS.init({ duration: 1000, once: true });
+
+    const lenis = new Lenis()
+    lenis.on("scroll", () => AOS.refresh())
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
   });
 </script>
+
+
 </body>
 </html> 
 
