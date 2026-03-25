@@ -10,7 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- GSAP 3 + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="!overflow-x-hidden bg-background font-urbanist text-colorBlack">
@@ -26,7 +28,7 @@
                         <i class="ri-menu-line "></i>
                     </button>
                     <nav id="nav-menu"
-                        class="fixed nav transition-transform duration-200 -translate-y-full left-0 top-0 bottom-0 h-full z-50  w-full sm:translate-y-0 bg-white dark:bg-bodyDark sm:dark:bg-transparent sm:bg-transparent shadow-lg sm:duration-200 sm:static sm:h-auto sm:block sm:w-full sm:rounded-none md:text-xs sm:shadow-none xl:md:text-sm">
+                        class="fixed nav transition-transform duration-200 -translate-y-full left-0 top-0 bottom-0 h-full z-50  w-full sm:translate-y-0 bg-white dark:bg-bodyDark sm:dark:bg-transparent sm:bg-transparent  sm:duration-200 sm:static sm:h-auto sm:block sm:w-full sm:rounded-none md:text-xs  xl:md:text-sm">
                         <div class="flex sm:hidden justify-between items-center mt-8 container mx-auto">
                             <a href="index.html"
                                 class="w-auto items-center">
@@ -42,27 +44,27 @@
                         </div>
                         <ul class="container mt-5 sm:mt-0 block sm:flex md:font-semibold md:space-y-0 space-y-7 md:p-0 p-5 ">
                             <li class="group">
-                                <a href="#home" class="nav-class">
+                                <a href="#hero" class="nav-class">
                                     <i
                                         class="ri-home-2-line mr-3 text-2xl text-black sm:hidden"></i>
                                     <span
-                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary  lg:text-sm 2xl:text-base">Beranda</span>
+                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary 2xl:text-base">Beranda</span>
                                 </a>
                             </li>
                             <li class="group">
-                                <a href="#relawan" class="nav-class">
+                                <a href="#roadmap" class="nav-class">
                                     <i
                                         class="ri-team-fill mr-3 text-2xl text-black sm:hidden"></i>
                                     <span
-                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary  lg:text-sm 2xl:text-base">Fitur</span>
+                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary 2xl:text-base">RoadMap</span>
                                 </a>
                             </li>
                             <li class="group">
-                                <a href="#about" class="nav-class">
+                                <a href="#service" class="nav-class">
                                     <i
                                         class="ri-earth-fill mr-3 text-2xl text-black sm:hidden"></i>
                                     <span
-                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary  lg:text-sm 2xl:text-base">Testimoni</span>
+                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary 2xl:text-base">Layanan</span>
                                 </a>
                             </li>
                              <li class="group">
@@ -70,7 +72,7 @@
                                     <i
                                         class="ri-earth-fill mr-3 text-2xl text-black sm:hidden"></i>
                                     <span
-                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary  lg:text-sm 2xl:text-base">Paket</span>
+                                        class="lg:text-[14px] text-[18px] lg:mt-0 mt-1  sm:text-[20px] md:text-xs text-[#444444] font-medium group-hover:text-primary 2xl:text-base">Perkenalan</span>
                                 </a>
                             </li>
                             <div class="items-center gap-2 md:hidden block sm:flex">
@@ -93,7 +95,7 @@
                     <div id="loginForm">
                       <div class="flex flex-col justify-center">
                         <div class="flex justify-center">
-                          <img class="w-32 my-10  " src="img/logo.svg" alt="">
+                          <img class="w-32 my-10  " src="img/logo-1.svg" alt="">
                         </div>
                         <h1 class="subtitle text-center">Selamat Datang Kembali</h1>
                         <p class="paragraf text-center max-w-md">Masuk dan Mulai Pilih Paket Tes CPNS Anda Sekarang, Jadilah Juara!</p>
@@ -110,6 +112,7 @@
 
                     <!-- REGISTER FORM -->
                     <div id="registerForm" class="hidden">
+                      <img src="img/logo-1.svg" alt="">
                       <h2 class="text-2xl font-bold mb-4 text-center">Buat Akun</h2>
                       <input type="text" placeholder="Nama Lengkap" class="input-auth">
                       <input type="email" placeholder="Email" class="input-auth">
@@ -133,15 +136,15 @@
     <div class="container md:pt-[40px] mx-auto">
       <div class="grid lg:grid-cols-12 grid-cols-1 lg:gap-10 gap-0">
         <div class="col-span-7 flex flex-col justify-center mb-10">
-          <h1 class="headline">
+          <h1 class="headline reveal-up">
            Buat <span class=" text-primary">roadmap</span>, temukan <span class=" text-primary">ilmu baru</span>, dan berbagi <span class=" text-primary">pengalaman.</span>
           </h1>
-          <p class="pragraf mt-3">Berlatih dengan soal terkurasi, simulasi ujian real-time, dan laporan performa instan untuk membantu kamu mempersiapkan ujian dengan lebih percaya diri.</p>
-          <div class="flex btn-group gap-2 mt-5">
-            <a href="#relawan"><button class="btn-primary">Bagikan Pengalamanmu</button></a>
+          <p class="pragraf mt-3 reveal-up">Berlatih dengan soal terkurasi, simulasi ujian real-time, dan laporan performa instan untuk membantu kamu mempersiapkan ujian dengan lebih percaya diri.</p>
+          <div class="flex btn-group gap-2 mt-5 reveal-up">
+            <a href="#"><button class="btn-primary">Bagikan Pengalamanmu</button></a>
             <a href="#product"><button class="btn-secondary"> Explore Materi Belajar</button></a>
           </div>
-          <div class="flex gap-2 mt-5">
+          <div class="flex gap-2 mt-5 reveal-up">
             <img src="img/lomba-hero-item.svg" alt="audions" class="w-32">
             <h4 class=" text-[16px] text-colorBlack font-medium">Dipercaya oleh 5.000+ Learner & Mentor</h4>
           </div>
@@ -156,12 +159,12 @@
   <!-- service start -->
   <section id="service">
     <div class="container lg:pt-[120px] pt-[40px] mx-auto">
-      <div class="lg:flex justify-between">
+      <div class="lg:flex justify-between reveal-up">
         <h1 class="title">Berbagai Fitur untuk Belajar dan Berbagi Pengetahuan</h1>
         <p class="pragraf max-w-xl lg:mt-10 mt-2 lg:text-end">Temukan berbagai fitur yang mendukung proses belajar, berbagi roadmap, dan mengajar dalam satu ekosistem pembelajaran berbasis komunitas.</p>
       </div>
       <div class="overflow-x-auto hide-scrollbar lg:overflow-x-hidden mt-2 lg:mt-0 max-w-full overflow-y-hidden">
-        <div class="flex lg:grid lg:grid-cols-4 gap-5 mt-10 min-w-[800px] lg:min-w-0 px-2">
+        <div class="flex lg:grid lg:grid-cols-4 gap-5 mt-10 min-w-[800px] lg:min-w-0 px-2 reveal-stagger">
           <div  class="card">
             <div class="card-service">
               <h4>01</h4>
@@ -199,11 +202,11 @@
   <section id="about" class="">
     <div class="container pt-[120px] mx-auto">
       <div class="grid lg:grid-cols-12 gap-10">
-        <div class="lg:col-span-5 col-span-8 flex flex-col justify-center"><img class="w-full" src="img/lomba-about.svg" alt=""></div>
+        <div class="lg:col-span-5 col-span-8 flex flex-col justify-center reveal-up"><img class="w-full" src="img/lomba-about.svg" alt=""></div>
         <div class="col-span-7 lg:mt-10">
-          <h1 class="title">Satu Platform untuk <span class="text-primary">Belajar, Berbagi Ilmu,</span> dan <span class="text-primary"> Bertumbuh</span> Bersama</h1>
-          <p  class="pragraf mt-3 line-clamp-3">Skill Exchange adalah platform pembelajaran berbasis video/blog yang memungkinkan siapa saja belajar gratis, membagikan roadmap terstruktur, dan membuka kelas private untuk berbagi keahlian.</p>
-          <div class="flex btn-group gap-2 mt-5">
+          <h1 class="title reveal-up">Satu Platform untuk <span class="text-primary">Belajar, Berbagi Ilmu,</span> dan <span class="text-primary"> Bertumbuh</span> Bersama</h1>
+          <p  class="pragraf mt-3 line-clamp-3 reveal-up">Skill Exchange adalah platform pembelajaran berbasis video/blog yang memungkinkan siapa saja belajar gratis, membagikan roadmap terstruktur, dan membuka kelas private untuk berbagi keahlian.</p>
+          <div class="flex btn-group gap-2 mt-5 reveal-up">
               <a href="#relawan"><button class="btn-primary">Mulai Langkah Belajarmu</button></a>
               <a href="#product"><button class="btn-secondary">Jelajahi Roadmap Pembelajaran</button></a>
           </div>
@@ -215,7 +218,7 @@
   <!-- package start -->
   <section id="package" class="">
     <div class="container pt-[120px] mx-auto">
-      <div class="lg:flex justify-between">
+      <div class="lg:flex justify-between reveal-up">
         <h1  class=" title">Category Pembelajaran Yang Bisa Kamu Coba</h1>
          <div class="relative  ">
           <i class="fa-solid fa-magnifying-glass text-[16px] text-[rgba(1,1,1,0.62)] absolute top-[26px] left-3 -translate-y-1/2"></i>
@@ -229,13 +232,13 @@
       </div>
     
      <div class="overflow-x-auto hide-scrollbar lg:overflow-x-hidden mt-2 lg:mt-0 max-w-full overflow-y-hidden">
-       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0">
+       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0 reveal-stagger">
         <div  class="card">
             <div class="flex gap-3 mb-2">
               <div class="card-service flex gap-2">
                 <h4>01</h4>
               </div>
-              <h3 class="subtitle-service mt-2">Teknologi</h3>
+              <h3 class="subtitle-service mt-1">Teknologi</h3>
             </div>
             <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Bagikan roadmap belajarmu agar orang lain belajar dengan arah yang jelas dan sistematis.</p>
             <h6 class="text-lg text-primary font-semibold mt-1">30 Roadmap</h6>
@@ -245,7 +248,7 @@
               <div class="card-service flex gap-2">
                 <h4>04</h4>
               </div>
-              <h3 class="subtitle-service mt-2">Design</h3>
+              <h3 class="subtitle-service mt-1">Design</h3>
             </div>
             <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Kuasai pemahaman seputar UI/UX, desain grafis, hingga desain produk digital dalam proses belajar anda.</p>
             <h6 class="text-lg text-primary font-semibold mt-1">30 Roadmap</h6>
@@ -255,7 +258,7 @@
               <div class="card-service flex gap-2">
                 <h4>02</h4>
               </div>
-              <h3 class="subtitle-service mt-2">Bisnis</h3>
+              <h3 class="subtitle-service mt-1">Bisnis</h3>
             </div>
             <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Pelajari strategi bisnis, manajemen, dan kewirausahaan hingga memahami kompetitor bisnis.</p>
             <h6 class="text-lg text-primary font-semibold mt-1">10 Roadmap</h6>
@@ -265,58 +268,58 @@
               <div class="card-service flex gap-2">
                 <h4>03</h4>
               </div>
-              <h3 class="subtitle-service mt-2">Digital Marketing</h3>
+              <h3 class="subtitle-service mt-1">Digital Marketing</h3>
             </div>
             <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Pahami social media, content marketing, dan digital advertising hingga dapat menarik customer.</p>
             <h6 class="text-lg text-primary font-semibold mt-1">15 Roadmap</h6>
           </div>
            
       </div>
-       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0">
+       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0 reveal-stagger">
         <div  class="card">
             <div class="flex gap-3 mb-2">
               <div class="card-service flex gap-2">
-                <h4>01</h4>
+                <h4>05</h4>
               </div>
-              <h3 class="subtitle-service mt-2">Teknologi</h3>
+              <h3 class="subtitle-service mt-1">Data & AI</h3>
             </div>
-            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Bagikan roadmap belajarmu agar orang lain belajar dengan arah yang jelas dan sistematis.</p>
-            <h6 class="text-lg text-primary font-semibold mt-1">30 Roadmap</h6>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Belajar analisis data, machine learning, dan data visualization untuk kebutuhan bisnis anda.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">15 Roadmap</h6>
           </div>
           <div  class="card">
             <div class="flex gap-3 mb-2">
               <div class="card-service flex gap-2">
-                <h4>04</h4>
+                <h4>06</h4>
               </div>
-              <h3 class="subtitle-service mt-2">Design</h3>
+              <h3 class="subtitle-service mt-1">Bahasa</h3>
             </div>
-            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Kuasai pemahaman seputar UI/UX, desain grafis, hingga desain produk digital dalam proses belajar anda.</p>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Kembangkan kemampuan bahasa asing untuk komunikasi global dalam dunia pekerjaan.</p>
+            <h6 class="text-lg text-primary font-semibold mt-1">25 Roadmap</h6>
+          </div>
+           <div  class="card">
+            <div class="flex gap-3 mb-2">
+              <div class="card-service flex gap-2">
+                <h4>07</h4>
+              </div>
+              <h3 class="subtitle-service mt-1">Pengembangan Diri</h3>
+            </div>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Tingkatkan produktivitas, public speaking, dan soft skill guna menunjang value diri.</p>
             <h6 class="text-lg text-primary font-semibold mt-1">30 Roadmap</h6>
           </div>
            <div  class="card">
             <div class="flex gap-3 mb-2">
               <div class="card-service flex gap-2">
-                <h4>02</h4>
+                <h4>08</h4>
               </div>
-              <h3 class="subtitle-service mt-2">Bisnis</h3>
+              <h3 class="subtitle-service mt-1">Kreativitas</h3>
             </div>
-            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Pelajari strategi bisnis, manajemen, dan kewirausahaan hingga memahami kompetitor bisnis.</p>
+            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Eksplorasi fotografi, video editing, dan content creation untuk meningkatkan skill anda di dunia digital.</p>
             <h6 class="text-lg text-primary font-semibold mt-1">10 Roadmap</h6>
-          </div>
-           <div  class="card">
-            <div class="flex gap-3 mb-2">
-              <div class="card-service flex gap-2">
-                <h4>03</h4>
-              </div>
-              <h3 class="subtitle-service mt-2">Digital Marketing</h3>
-            </div>
-            <p class="text-[15px] text-paragraf font-medium mt-1 line-clamp-3">Pahami social media, content marketing, dan digital advertising hingga dapat menarik customer.</p>
-            <h6 class="text-lg text-primary font-semibold mt-1">15 Roadmap</h6>
           </div>
       </div>
      </div>
      <div  class="flex justify-center mt-10">
-      <a href="all-package.html"><button class="btn-primary">Lihat Semua Kategori</button></a>
+      <a href="all-category.html"><button class="btn-primary">Lihat Semua Kategori</button></a>
     </div>
     </div>
   </section>
@@ -326,14 +329,14 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div class="lg:col-span-6">
-            <h2 class="title mb-4">
+            <h2 class="title mb-4 reveal-up">
               Mengapa Platform Ini Cocok Untukmu?
             </h2>
-            <p class="pragraf mb-8">
+            <p class="pragraf mb-8 reveal-up">
               Tidak semua platform belajar memberikan arah yang jelas. Di sini, kamu
               tidak hanya belajar — kamu berkembang bersama komunitas.
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 reveal-stagger">
               <div class="flex items-start gap-3">
                 <div class="mt-1">
                   <div class="w-5 h-5 flex items-center justify-center rounded bg-primary text-white text-xs">
@@ -396,7 +399,7 @@
               </div>
             </div>
           </div>
-          <div class="lg:col-span-6">
+          <div class="lg:col-span-6 reveal-up">
             <img 
               src="img/lomba-why.svg" 
               alt="why image"
@@ -412,12 +415,12 @@
       <!-- roadmap start -->
   <section id="roadmap" class="">
     <div class="container pt-[120px] mx-auto">
-      <div class="lg:flex justify-between">
+      <div class="lg:flex justify-between reveal-up">
         <h1  class=" title">Jelajahi Roadmap Pembelajaran Kami</h1>
         <p  class="pragraf max-w-lg lg:mt-10 mt-2 lg:text-end">Temukan berbagai roadmap terstruktur yang dibuat oleh komunitas untuk membantu kamu belajar lebih terarah dan sistematis.</p>
       </div>
      <div class="overflow-x-auto hide-scrollbar lg:overflow-x-hidden mt-2 lg:mt-0 max-w-full overflow-y-hidden">
-       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0">
+       <div  class="grid grid-cols-3 lg:grid-cols-4 gap-5 lg:mt-10 mt-2 min-w-[800px] md:min-w-[900px] lg:min-w-0 reveal-stagger">
           <div  class="card">
             <img src="img/roadmap-uiux.svg" alt="roadmap UIUX">
             <h6 class="text-[16px] text-primary mt-2">Desain UIUX</h6>
@@ -454,7 +457,7 @@
  <!-- TESTIMONI START -->
 <section id="testimoni" class="pt-[120px]">
   <div class="container mx-auto px-4">
-    <div class="lg:flex justify-between">
+    <div class="lg:flex justify-between reveal-up">
         <h1  class="text-2xl md:text-3xl lg:text-4xl font-semibold text-colorBlack leading-snug"> Dipercaya oleh Ribuan Pembelajar untuk Mengembangkan Skill</h1>
         <p  class="pragraf max-w-lg lg:mt-10 mt-2 lg:text-end"> Cerita nyata dari para learner dan mentor yang berkembang bersama melalui roadmap terstruktur dan komunitas kolaboratif.</p>
     </div>
@@ -585,7 +588,7 @@
       </div>
 
       <div class="flex justify-center">
-        <div class="swiper-scrollbar custom-pagination max-w-xs"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </div>
@@ -605,7 +608,7 @@
     <div class=" bg-[#F4F6F8] rounded-xl p-6 md:p-8 h-[280px] overflow-hidden">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         <div class="hidden lg:block lg:col-span-5"></div>
-        <div class="lg:col-span-7 text-center lg:text-left">
+        <div class="lg:col-span-7 text-center lg:text-left reveal-stagger">
           <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold text-colorBlack leading-snug mb-4">
             Mulai Perjalanan Belajarmu <br class="hidden sm:block">
             Sekarang Juga
@@ -633,12 +636,12 @@
   <!-- faq start -->
   <section id="faq" class="">
     <div class="container py-[120px] mx-auto">
-      <div class="lg:flex justify-between">
+      <div class="lg:flex justify-between reveal-up">
         <h1  class=" title">Pertanyaan Umum Seputar Skill Exchange</h1>
         <p class="pragraf max-w-lg lg:mt-10 mt-2 lg:text-end">Temukan jawaban tentang cara belajar, mengunggah roadmap, dan membuka kelas di platform kami.</p>
       </div>
       <div class="grid lg:grid-cols-12 lg:gap-5 mt-2 lg:mt-10">
-        <div class="col-span-6">
+        <div class="col-span-6 reveal-stagger">
           <div class="items-center lg:mt-0 mt-5">
           <div n="400" data-aos-delay="100" class="relative mb-3 card-faq">
               <h6 class="mb-0">
@@ -701,7 +704,7 @@
           </div>
           </div>
         </div>
-        <div class="col-span-6">
+        <div class="col-span-6 reveal-stagger">
           <div class="items-center lg:mt-0 mt-0">
              <div n="550" data-aos-delay="100" class="relative mb-3 card-faq">
               <h6 class="mb-0">
@@ -793,45 +796,58 @@
           <div class="lg:col-span-6 md:col-span-8 sm:col-span-2 text-center lg:text-left">
             <img src="img/logo-2.svg" alt="Logo" class="mx-auto lg:mx-0 w-32 md:w-40">
             <p class="text-sm text-[rgba(251,251,251,1)] mt-5 max-w-md mx-auto lg:mx-0">
-              Stay connected with us dan terus jadi bagian dari gerakan hijau! 
-              Temukan inspirasi, kegiatan, dan produk ramah lingkungan yang membawa dampak nyata bagi bumi.
+              Belajar, berbagi, dan berkembang bersama dalam ekosistem pembelajaran berbasis roadmap terstruktur dan komunitas kolaboratif.
             </p>
           </div>
           <div class="lg:col-span-2 md:col-span-4 sm:col-span-1">
             <h1 class="subtitle-footer font-semibold">Information</h1>
             <div class="space-y-2 mt-3">
               <p class="paragraf-footer cursor-pointer">Tentang Kami</p>
-              <p class="paragraf-footer cursor-pointer">Galeri Kegiatan</p>
-              <p class="paragraf-footer cursor-pointer">Produk Daur Ulang</p>
-              <p class="paragraf-footer cursor-pointer">Testimoni</p>
+              <p class="paragraf-footer cursor-pointer">Cara Kerja</p>
+              <p class="paragraf-footer cursor-pointer">Keanggotaan</p>
+              <p class="paragraf-footer cursor-pointer">Road Map Belajar</p>
             </div>
           </div>
           <div class="lg:col-span-2 md:col-span-4 sm:col-span-1">
             <h1 class="subtitle-footer font-semibold">Helpful Link</h1>
             <div class="space-y-2 mt-3">
-              <p class="paragraf-footer cursor-pointer">Keanggotaan</p>
-              <p class="paragraf-footer cursor-pointer">Bantuan & Dukungan</p>
-              <p class="paragraf-footer cursor-pointer">Kebijakan Privasi</p>
-              <p class="paragraf-footer cursor-pointer">Syarat & Ketentuan</p>
+              <p class="paragraf-footer cursor-pointer">Galeri Roadmap</p>
+              <p class="paragraf-footer cursor-pointer">Jadi Mentor</p>
+              <p class="paragraf-footer cursor-pointer">Upload Roadmap</p>
+              <p class="paragraf-footer cursor-pointer">FAQ</p>
             </div>
           </div>
           <div class="lg:col-span-2 md:col-span-4 sm:col-span-1">
             <h1 class="subtitle-footer font-semibold">Our Services</h1>
             <div class="space-y-2 mt-3">
-              <p class="paragraf-footer cursor-pointer">Aksi Bersih Relawan</p>
-              <p class="paragraf-footer cursor-pointer">Rekrut Keanggotaan</p>
-              <p class="paragraf-footer cursor-pointer">Edukasi & Pembelajaran</p>
-              <p class="paragraf-footer cursor-pointer">Penjualan Hasil Pengrajin</p>
+              <p class="paragraf-footer cursor-pointer">Roadmap Terstruktur</p>
+              <p class="paragraf-footer cursor-pointer">Room Diskusi</p>
+              <p class="paragraf-footer cursor-pointer">Materi Blog & Video</p>
+              <p class="paragraf-footer cursor-pointer">Kategori Pembelajaran</p>
             </div>
           </div>
         </div>
-        <div class="md:flex justify-between mt-32">
-          <p class="text-[15px] text-white">© Copyright by Atrem Project. All right reserved</p>
-          <div class="flex gap-5 md:mt-0 mt-5">
-            <h4 class="paragraf-footer">Privacy  Policy</h4>
-            <h4 class="paragraf-footer">Teams of use</h4>
-            <h4 class="paragraf-footer">Legal</h4>
+        <hr class=" border- border-[rgba(251,251,251,1)] mt-32">
+        <div class="md:flex justify-between mt-3">
+          <div class="flex gap-5 md:mt-0 mt-5 text-xl">
+            <a href="#" class="text-white hover:-translate-y-1 transition duration-300">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="text-white hover:-translate-y-1  transition duration-300">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="#" class="text-white hover:-translate-y-1 transition duration-300">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="text-white hover:-translate-y-1 ransition duration-300">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
           </div>
+          <p class="text-[15px] text-white">© Copyright by Skill Exchange. All rights reserved.</p>
+          
         </div>
       </div>
     </footer>
@@ -841,27 +857,11 @@
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="dist/js/lightbox-plus-jquery.js" defer></script>
 <script src="dist/js/lightbox.min.js" defer></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
 <script src="js/animation.js" defer></script>
 <script src="js/script.js"></script>
 <script src="js/popup.js"></script>
 <script src="js/filter.js"></script>
-
-<script defer>
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    AOS.init({ duration: 1000, once: true });
-
-    const lenis = new Lenis()
-    lenis.on("scroll", () => AOS.refresh())
-
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
-    requestAnimationFrame(raf)
-  });
-</script>
+<script src="js/gsap-animations.js" defer></script>
 
 
 </body>

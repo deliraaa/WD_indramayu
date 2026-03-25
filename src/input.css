@@ -52,12 +52,12 @@
 }
 
 
-.swiper-scrollbar {
+/* .swiper-scrollbar {
   background-color: #E5E7EB;
   height: 3px;
   border-radius: 10px;
-  width: 200px !important;  /* override inline style swiper */
-  left: unset !important;   /* override inline style swiper */
+  width: 200px !important;  
+  left: unset !important;   
   position: relative !important;
   margin: 0 auto;
 }
@@ -70,8 +70,27 @@
 }
 .swiper-scrollbar:active {
   cursor: grabbing;
+} */
+
+.swiper-free-mode > .swiper-wrapper{
+  transition-timing-function : linear !important;
 }
 
+.custom-bullet {
+  width: 40px;
+  height: 5px;
+  display: inline-block;
+  border-radius: 8px;
+  margin: 0 2px;
+  background: #CACACA;
+}
+
+.custom-bullet-active {
+  background:  rgba(143, 171, 212, 1);
+  width: 40px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -154,4 +173,16 @@
 /* profile */
 .sidebar{
   @apply border border-gray-500 rounded-lg
+}
+
+/* ═══ GSAP — initial hidden state (anti-FOUC) ═══ */
+.reveal-up,
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* Navbar glassmorphism transition */
+#navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }

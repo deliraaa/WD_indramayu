@@ -1,9 +1,12 @@
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 16,
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
+ grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    bulletActiveClass: "custom-bullet-active",
+    bulletClass: "custom-bullet",
   },
   breakpoints: {
     640: {
@@ -14,6 +17,43 @@ const swiper = new Swiper(".mySwiper", {
     },
     1024: {
       slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+const sswiper = new Swiper(".categorySwiper", {
+  slidesPerView: 4,
+  spaceBetween: 16,
+  
+  grabCursor: true,
+
+  grid: {
+    rows: 3,
+    fill: "row", 
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    bulletActiveClass: "custom-bullet-active",
+    bulletClass: "custom-bullet",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+
+    },
+    640: {
+      slidesPerView: 2,
+
+    },
+    1024: {
+      slidesPerView: 3,
+
     },
     1280: {
       slidesPerView: 4,
