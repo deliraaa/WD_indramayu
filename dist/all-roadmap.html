@@ -92,16 +92,15 @@
                     <!-- LOGIN FORM -->
                     <div id="loginForm">
                       <div class="flex flex-col justify-center">
-                        <div class="flex justify-center">
-                          <img class="w-32 my-10  " src="img/logo-1.svg" alt="">
-                        </div>
-                        <h1 class="subtitle text-center">Selamat Datang Kembali</h1>
-                        <p class="paragraf text-center max-w-md">Masuk dan Mulai Pilih Paket Tes CPNS Anda Sekarang, Jadilah Juara!</p>
+
+                        <h1 class="text-3xl font-bold mb-5 text-center">Login</h1>
                       </div>
                      
                       <input type="email" placeholder="Email" class="input-auth">
                       <input type="password" placeholder="Password" class="input-auth">
-                      <button class="btn-primary w-full mt-3">Masuk</button>
+                      <a href="index-2.html">
+                        <button class="btn-primary w-full mt-3">Masuk</button>
+                      </a>
                       <p class="text-sm text-center mt-3">
                         Belum punya akun?
                         <span id="toRegister" class="text-blue-600 cursor-pointer">Daftar</span>
@@ -110,12 +109,13 @@
 
                     <!-- REGISTER FORM -->
                     <div id="registerForm" class="hidden">
-                      <img src="img/logo-1.svg" alt="">
-                      <h2 class="text-2xl font-bold mb-4 text-center">Buat Akun</h2>
+                      <h1 class="text-3xl font-bold mb-5 text-center">Register</h1>
                       <input type="text" placeholder="Nama Lengkap" class="input-auth">
                       <input type="email" placeholder="Email" class="input-auth">
                       <input type="password" placeholder="Password" class="input-auth">
-                      <button class="btn-secondary w-full mt-3">Daftar</button>
+                      <a href="index-2.html">
+                        <button class="btn-primary w-full mt-3">Daftar</button>
+                      </a>
                       <p class="text-sm text-center mt-3">
                         Sudah punya akun?
                         <span id="toLogin" class="text-blue-600 cursor-pointer">Masuk</span>
@@ -237,47 +237,123 @@
       <div id="cardContainer"
         class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
 
-       <div class="card"
-  data-category="Desain"
-  data-title="UI/UX Untuk Pemula">
-  <img src="img/roadmap-uiux.svg" alt="roadmap UIUX">
-  <h6 class="text-[16px] text-primary mt-2">Desain UIUX</h6>
-  <h1 class="subtitle-service mt-1">UI/UX Untuk Pemula</h1>
+   <!-- 1 -->
+<div class="card" data-category="Desain UI/UX" data-title="UI/UX Untuk Pemula">
+  <img class="w-full" src="img/roadmap-uiux.svg" alt="UIUX">
+  <h6 class="text-[16px] text-primary mt-2">Desain UI/UX</h6>
+  <a href="detail-roadmap.html"><h1 class="subtitle-service mt-1">UI/UX Untuk Pemula</h1></a>
   <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
     Dasar desain hingga prototyping interaktif pada user.
   </p>
 </div>
 
-<div class="card"
-  data-category="Teknologi"
-  data-title="Front-End Dev">
-  <img src="img/roadmap-front.svg" alt="roadmap FE">
-  <h6 class="text-[16px] text-primary mt-2">Teknologi</h6>
-  <h1 class="subtitle-service mt-1">Front-End Dev</h1>
-  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
-    Dasar Pembelajaran HTML, CSS, JavaScript untuk pemula.
-  </p>
-</div>
-
-<div class="card"
-  data-category="Digital Marketing"
-  data-title="Digital Marketing">
-  <img src="img/roadmap-marketing.svg" alt="roadmap">
+<!-- 2 -->
+<div class="card" data-category="Marketing" data-title="Digital Marketing">
+  <img class="w-full" src="img/roadmap-marketing.svg" alt="Marketing">
   <h6 class="text-[16px] text-primary mt-2">Marketing</h6>
   <h1 class="subtitle-service mt-1">Digital Marketing</h1>
   <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
-    Tips/Strategi konten dan pengiklanan product digital.
+    Tips strategi konten dan pengiklanan produk digital yang bermanfaat.
   </p>
 </div>
 
-<div class="card"
-  data-category="Data"
-  data-title="Data Analysis">
-  <img src="img/roadmap-data.svg" alt="roadmap">
+<!-- 3 -->
+<div class="card" data-category="Data" data-title="Data Analysis">
+  <img class="w-full" src="img/roadmap-data.svg" alt="Data">
   <h6 class="text-[16px] text-primary mt-2">Data</h6>
   <h1 class="subtitle-service mt-1">Data Analysis</h1>
   <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
     Mempelajari dasar pengolahan dan visualisasi data.
+  </p>
+</div>
+
+<!-- 4 -->
+<div class="card" data-category="Keuangan" data-title="Keuangan Pribadi">
+  <img class="w-full" src="img/roadmap keuangan.svg" alt="Keuangan">
+  <h6 class="text-[16px] text-primary mt-2">Keuangan</h6>
+  <h1 class="subtitle-service mt-1">Keuangan Pribadi</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Belajar mengatur pemasukan, pengeluaran, dan tabungan.
+  </p>
+</div>
+
+<!-- 5 -->
+<div class="card" data-category="Kewirausahaan" data-title="Mulai Bisnis">
+  <img class="w-full" src="img/roadmap bisnis.svg" alt="Bisnis">
+  <h6 class="text-[16px] text-primary mt-2">Kewirausahaan</h6>
+  <h1 class="subtitle-service mt-1">Mulai Bisnis</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Panduan membangun bisnis dari ide hingga eksekusi.
+  </p>
+</div>
+
+<!-- 6 -->
+<div class="card" data-category="Karier" data-title="Persiapan Karier">
+  <img class="w-full" src="img/roadmap karier.svg" alt="Karier">
+  <h6 class="text-[16px] text-primary mt-2">Karier</h6>
+  <h1 class="subtitle-service mt-1">Persiapan Karier</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Tips membuat CV, portofolio, dan menghadapi interview.
+  </p>
+</div>
+
+<!-- 7 -->
+<div class="card" data-category="Produktivitas" data-title="Manajemen Waktu">
+  <img class="w-full" src="img/oadmap management waktu.svg" alt="Waktu">
+  <h6 class="text-[16px] text-primary mt-2">Produktivitas</h6>
+  <h1 class="subtitle-service mt-1">Manajemen Waktu</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Pelajari cara mengatur jadwal belajar agar lebih konsisten.
+  </p>
+</div>
+
+<!-- 8 -->
+<div class="card" data-category="Keuangan" data-title="Investasi untuk Pemula">
+  <img class="w-full" src="img/roadmap investasi.svg" alt="Investasi">
+  <h6 class="text-[16px] text-primary mt-2">Keuangan</h6>
+  <h1 class="subtitle-service mt-1">Investasi untuk Pemula</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Pahami dasar investasi seperti saham dan reksa dana.
+  </p>
+</div>
+
+<!-- 9 -->
+<div class="card" data-category="Kewirausahaan" data-title="Strategi Bisnis Digital">
+  <img class="w-full" src="img/roadmap strategi bisnis.svg" alt="Strategi">
+  <h6 class="text-[16px] text-primary mt-2">Kewirausahaan</h6>
+  <h1 class="subtitle-service mt-1">Strategi Bisnis Digital</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Pelajari cara membangun dan mengembangkan bisnis online.
+  </p>
+</div>
+
+<!-- 10 -->
+<div class="card" data-category="Teknologi" data-title="Dasar Web">
+  <img class="w-full" src="img/roadmap dasar web.svg" alt="Web">
+  <h6 class="text-[16px] text-primary mt-2">Teknologi</h6>
+  <h1 class="subtitle-service mt-1">Dasar Web</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Pelajari dasar HTML, CSS, dan struktur website modern.
+  </p>
+</div>
+
+<!-- 11 -->
+<div class="card" data-category="Desain" data-title="Desain Grafis Dasar">
+  <img class="w-full" src="img/roadmap design grafis.svg" alt="Desain">
+  <h6 class="text-[16px] text-primary mt-2">Desain</h6>
+  <h1 class="subtitle-service mt-1">Desain Grafis Dasar</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Kenali prinsip desain visual dan penggunaan warna.
+  </p>
+</div>
+
+<!-- 12 -->
+<div class="card" data-category="Digital Marketing" data-title="Strategi Media Sosial">
+  <img class="w-full" src="img/roadmap media sosial.svg" alt="Sosial">
+  <h6 class="text-[16px] text-primary mt-2">Digital Marketing</h6>
+  <h1 class="subtitle-service mt-1">Strategi Media Sosial</h1>
+  <p class="text-[14px] text-paragraf font-medium mt-1 line-clamp-3">
+    Pelajari cara mengembangkan brand melalui platform sosial.
   </p>
 </div>
 
@@ -451,13 +527,17 @@
           <p class="text-paragraf mb-6 max-w-xl mx-auto lg:mx-0">
             Jangan hanya belajar tanpa arah. Bergabunglah bersama komunitas pembelajar dan mulai kembangkan skill-mu melalui roadmap terstruktur hari ini.
           </p>
-          <div class="flex btn-group flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-            <button class="btn-primary">
+           <div class="flex btn-group flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+           <a href="#package">
+             <button class="btn-primary">
               Mulai Pembelajaran Sekarang
             </button>
-            <button class="btn-secondary">
+           </a>
+           <a href="detail-roadmap.html">
+             <button class="btn-secondary">
               Jelajahi Roadmap Pembelajaran
             </button>
+           </a>
           </div>
         </div>
       </div>
@@ -469,7 +549,7 @@
 <!-- CTA END -->
 
   <!-- footer -->
-    <footer class="bg-[rgba(0,0,0,1)] pt-[40px]">
+    <footer class="bg-[rgba(0,0,0,1)] pt-[40px] pb-5">
       <div class="container mx-auto ">
         <div class="grid lg:grid-cols-12 md:grid-cols-8 sm:grid-cols-2 gap-10">
           <div class="lg:col-span-6 md:col-span-8 sm:col-span-2 text-center lg:text-left">

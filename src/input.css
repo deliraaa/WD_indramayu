@@ -29,11 +29,19 @@
 }
 
 .btn-primary {
-  @apply bg-primary text-white py-2 text-sm font-medium px-4 hover:brightness-100 duration-300 box-border rounded-[2px];
+  @apply py-1 px-4 bg-primary rounded-sm border border-primary text-white
+         transition-all duration-300 ease-out
+         hover:brightness-110
+         focus:outline-none focus:ring-0  cursor-pointer line-clamp-1;
 }
+
 .btn-secondary {
-  @apply border-[1.5px] border-primary text-primary py-1.5 text-sm font-medium px-4 duration-300 box-border rounded-[2px];
+  @apply py-1 px-4 bg-transparent border border-primary text-primary rounded-sm
+         transition-all duration-300 ease-out
+         hover:bg-primary hover:border-primary hover:text-white
+         focus:outline-none focus:ring-0  cursor-pointer line-clamp-1;
 }
+
 .btn-primary.secondary-style {
   @apply text-primary border-primary bg-transparent  cursor-pointer line-clamp-1;
 }
